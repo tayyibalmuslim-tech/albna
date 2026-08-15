@@ -1,0 +1,344 @@
+/* ============================================================
+   خطة الدراسة — Study Plan Tracker
+   Design tokens
+   ============================================================ */
+:root{
+  --paper:      #F5F3EC;
+  --paper-card: #FCFBF7;
+  --ink:        #1E2A22;
+  --ink-soft:   #4C574C;
+  --muted:      #8B8677;
+  --line:       #E3DECE;
+  --accent:     #0E6E5B;   /* deep manuscript-ink emerald */
+  --accent-dark:#0A5346;
+  --gold:       #B8862E;   /* gilded-manuscript gold */
+  --gold-soft:  #EFE0BC;
+  --done-bg:    #EDF5F1;
+  --shadow:     0 1px 2px rgba(30,42,34,.06), 0 4px 14px rgba(30,42,34,.05);
+  --radius:     14px;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:      #171C18;
+    --paper-card: #1E241F;
+    --ink:        #EDEAE0;
+    --ink-soft:   #B7BDB2;
+    --muted:      #7E8A7C;
+    --line:       #2B332B;
+    --accent:     #37B08F;
+    --accent-dark:#2A8A70;
+    --gold:       #D8AC55;
+    --gold-soft:  #3A331F;
+    --done-bg:    #1B2620;
+    --shadow:     0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.35);
+  }
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Tajawal', 'Segoe UI', sans-serif;
+  line-height:1.7;
+  min-height:100vh;
+}
+
+.wrap{
+  max-width:840px;
+  margin:0 auto;
+  padding:28px 20px 80px;
+}
+
+/* ---------- header / breadcrumb ---------- */
+.crumbs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  align-items:center;
+  font-size:.85rem;
+  color:var(--muted);
+  margin-bottom:22px;
+}
+.crumbs a{ color:var(--muted); text-decoration:none; border-bottom:1px dotted transparent; }
+.crumbs a:hover{ color:var(--accent); border-color:var(--accent); }
+.crumbs .sep{ opacity:.5; }
+.crumbs .current{ color:var(--ink-soft); }
+
+.page-title{
+  font-family:'Amiri', 'Georgia', serif;
+  font-size:2rem;
+  font-weight:700;
+  margin:0 0 6px;
+  color:var(--ink);
+}
+.page-sub{
+  color:var(--ink-soft);
+  font-size:.95rem;
+  margin:0 0 22px;
+}
+.eyebrow{
+  display:inline-block;
+  font-size:.75rem;
+  letter-spacing:.02em;
+  color:var(--accent);
+  background:var(--done-bg);
+  border:1px solid var(--line);
+  padding:3px 10px;
+  border-radius:100px;
+  margin-bottom:10px;
+}
+
+/* ---------- top-level checkbox (subject / stage completion) ---------- */
+.top-check{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:14px 16px;
+  margin:18px 0 26px;
+  box-shadow:var(--shadow);
+}
+.top-check label{
+  font-weight:700;
+  font-size:1.05rem;
+  cursor:pointer;
+  flex:1;
+}
+.top-check.done{ background:var(--done-bg); border-color:var(--accent); }
+
+/* ---------- checkboxes ---------- */
+input[type="checkbox"]{
+  appearance:none;
+  -webkit-appearance:none;
+  width:22px;
+  height:22px;
+  min-width:22px;
+  border:2px solid var(--muted);
+  border-radius:6px;
+  cursor:pointer;
+  position:relative;
+  background:var(--paper-card);
+  transition:background .15s ease, border-color .15s ease;
+}
+input[type="checkbox"]:checked{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+input[type="checkbox"]:checked::after{
+  content:"";
+  position:absolute;
+  right:6px; top:2px;
+  width:6px; height:11px;
+  border:solid white;
+  border-width:0 2px 2px 0;
+  transform:rotate(35deg);
+}
+input[type="checkbox"]:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:2px;
+}
+
+/* ---------- progress bar ---------- */
+.progress-block{ margin:0 0 26px; }
+.progress-label{
+  display:flex;
+  justify-content:space-between;
+  font-size:.82rem;
+  color:var(--ink-soft);
+  margin-bottom:6px;
+}
+.progress-track{
+  height:8px;
+  background:var(--line);
+  border-radius:100px;
+  overflow:hidden;
+}
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg, var(--accent), var(--gold));
+  border-radius:100px;
+  transition:width .4s ease;
+}
+
+/* ---------- nav tabs (المواد / الأيام) ---------- */
+.tabs{
+  display:flex;
+  gap:10px;
+  margin-bottom:26px;
+  flex-wrap:wrap;
+}
+.tabs a{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 18px;
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:700;
+  box-shadow:var(--shadow);
+  transition:border-color .15s ease, transform .15s ease;
+  flex:1;
+  min-width:150px;
+}
+.tabs a:hover{ border-color:var(--accent); transform:translateY(-1px); }
+.tabs .tab-icon{ font-size:1.2rem; }
+
+/* ---------- lists (subjects / days / lectures) ---------- */
+.list{ display:flex; flex-direction:column; gap:10px; }
+
+.card-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  text-decoration:none;
+  color:var(--ink);
+  box-shadow:var(--shadow);
+  transition:border-color .15s ease, transform .15s ease;
+}
+.card-link:hover{ border-color:var(--accent); transform:translateY(-1px); }
+.card-link .idx{
+  font-family:'Amiri', serif;
+  font-weight:700;
+  color:var(--gold);
+  min-width:28px;
+  text-align:center;
+}
+.card-link .txt{ flex:1; }
+.card-link .txt .name{ font-weight:700; }
+.card-link .txt .meta{ font-size:.8rem; color:var(--muted); margin-top:2px; }
+.card-link.done{ background:var(--done-bg); }
+.card-link.done .txt .name{ color:var(--ink-soft); text-decoration:line-through; text-decoration-color:var(--accent); }
+.chev{ color:var(--muted); font-size:1.1rem; }
+
+/* lecture row: checkbox + text + link */
+.lecture{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.lecture.done{ background:var(--done-bg); }
+.lecture .lec-text{
+  flex:1;
+  cursor:pointer;
+}
+.lecture .lec-day{
+  font-size:.75rem;
+  color:var(--muted);
+  display:block;
+  margin-bottom:2px;
+}
+.lecture.done .lec-title{ color:var(--ink-soft); text-decoration:line-through; text-decoration-color:var(--accent); }
+.lecture .lec-link{
+  flex-shrink:0;
+  font-size:.8rem;
+  padding:7px 12px;
+  border-radius:100px;
+  text-decoration:none;
+  border:1px dashed var(--muted);
+  color:var(--muted);
+  white-space:nowrap;
+}
+.lecture .lec-link.filled{
+  border:1px solid var(--accent);
+  color:var(--accent-dark);
+  background:var(--done-bg);
+}
+.lecture .lec-link:hover{ border-style:solid; border-color:var(--accent); color:var(--accent-dark); }
+
+/* ---------- day dots (signature element on stage days index) ---------- */
+.day-thread{
+  display:grid;
+  grid-template-columns:repeat(8, 1fr);
+  gap:8px;
+  margin:0 0 30px;
+}
+@media (max-width:520px){
+  .day-thread{ grid-template-columns:repeat(6, 1fr); }
+}
+.day-dot{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:1;
+  border-radius:10px;
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  text-decoration:none;
+  color:var(--ink-soft);
+  font-size:.78rem;
+  font-weight:700;
+  box-shadow:var(--shadow);
+  transition:border-color .15s ease, transform .15s ease, background .15s ease;
+}
+.day-dot:hover{ transform:translateY(-2px); border-color:var(--gold); }
+.day-dot.done{ background:var(--accent); color:#fff; border-color:var(--accent); }
+.day-dot.rest{ border-style:dashed; }
+
+/* ---------- misc ---------- */
+.card{
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+}
+.meta-row{ font-size:.85rem; color:var(--ink-soft); margin:4px 0; }
+.meta-row b{ color:var(--ink); }
+.tags{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+.tag{
+  font-size:.75rem;
+  color:var(--accent-dark);
+  background:var(--done-bg);
+  border:1px solid var(--line);
+  padding:3px 10px;
+  border-radius:100px;
+}
+.empty-note{
+  color:var(--muted);
+  font-size:.9rem;
+  padding:18px;
+  border:1px dashed var(--line);
+  border-radius:var(--radius);
+  text-align:center;
+}
+.back-link{
+  display:inline-block;
+  margin-top:26px;
+  font-size:.85rem;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px dotted var(--muted);
+}
+.back-link:hover{ color:var(--accent); border-color:var(--accent); }
+
+.site-footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:.78rem;
+  margin-top:50px;
+}
