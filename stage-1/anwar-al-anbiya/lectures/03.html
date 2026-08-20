@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أنوار الأنبياء — الجزء 1 — إبراهيم عليه السلام — المقاطع ١–٤</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f7f2e8; --paper:#fffdf7; --ink:#221d16; --ink2:#5d5446; --ink3:#8a8072;
+  --line:#e7ddc9; --line2:#d6c9ae;
+  --gold:#b8863b;
+  --accent:#9a6a1e; --accent-d:#6b4610;
+  --n-doc:#2f6c8c; --n-term:#75519f; --n-alam:#1c7a5c; --n-exp:#a3701f;
+  --n-link:#3d7042; --n-fix:#b03a34; --n-ctx:#4a6383;
+  --fs:18px; --maxw:790px; --notew:290px; --gap:34px;
+  --sh:0 1px 2px rgba(60,45,20,.05),0 6px 18px rgba(60,45,20,.05);
+}
+html[data-theme="night"]{
+  --bg:#14161a; --paper:#1b1e24; --ink:#e8e3d8; --ink2:#b3ac9e; --ink3:#8b8478;
+  --line:#2c313a; --line2:#3b414c; --paper2:#20242b;
+  --n-doc:#7fb6d4; --n-term:#b795e0; --n-alam:#6cc4a4; 
+}
+html[data-theme="night"]{--n-exp:#d6a94f;--n-link:#7fbf85;--n-fix:#e8837c;--n-ctx:#8fa9c9;--gold:#d6a94f}
+html{font-size:var(--fs);scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Cairo',system-ui,'Segoe UI',sans-serif;
+  line-height:1.95;direction:rtl;text-align:right;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%}
+a{color:var(--accent-d)}
+
+/* ---------- progress + toolbar ---------- */
+#progress{position:fixed;top:0;right:0;height:4px;width:0;background:linear-gradient(90deg,var(--accent),var(--gold));z-index:90;transition:width .1s linear}
+.toolbar{
+  position:fixed;bottom:18px;left:18px;z-index:80;display:flex;gap:8px;
+  background:var(--paper);border:1px solid var(--line2);border-radius:999px;
+  padding:6px;box-shadow:var(--sh)
+}
+.toolbar button{
+  width:40px;height:40px;border:0;border-radius:999px;background:transparent;color:var(--ink2);
+  font-size:.95rem;font-family:inherit;cursor:pointer;line-height:1;display:grid;place-items:center
+}
+.toolbar button:hover{background:var(--bg);color:var(--accent-d)}
+
+/* ---------- TOC drawer ---------- */
+#tocBtn{position:fixed;top:14px;left:18px;z-index:81;border:1px solid var(--line2);background:var(--paper);
+  color:var(--ink2);border-radius:12px;padding:9px 14px;font-family:inherit;font-size:.8rem;cursor:pointer;box-shadow:var(--sh)}
+#toc{
+  position:fixed;top:0;right:-340px;width:330px;max-width:88vw;height:100%;z-index:95;
+  background:var(--paper);border-left:1px solid var(--line);box-shadow:-8px 0 30px rgba(0,0,0,.12);
+  overflow-y:auto;padding:26px 20px 60px;transition:right .28s ease
+}
+#toc.open{right:0}
+#toc h3{margin:0 0 6px;font-size:1rem;color:var(--accent-d)}
+#toc .toc-sub{font-size:.72rem;color:var(--ink3);margin:0 0 18px}
+#toc ol{list-style:none;margin:0;padding:0}
+#toc>ol>li{margin-bottom:6px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+#toc a{display:block;text-decoration:none;color:var(--ink);font-size:.82rem;padding:5px 6px;border-radius:8px}
+#toc a:hover{background:var(--bg);color:var(--accent-d)}
+#toc .lvl2{padding-inline-start:12px;border-inline-start:2px solid var(--line);margin:4px 0 6px}
+#toc .lvl2 a{font-size:.73rem;color:var(--ink2);padding:2px 8px;line-height:1.7}
+#tocOverlay{position:fixed;inset:0;background:rgba(20,15,5,.35);z-index:94;display:none}
+#tocOverlay.open{display:block}
+
+/* ---------- header ---------- */
+.hero{
+  background:linear-gradient(160deg,var(--accent) 0%,var(--accent-d) 100%);
+  color:#fff;padding:66px 20px 46px;text-align:center;position:relative;overflow:hidden
+}
+.hero::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.16),transparent 45%),
+             radial-gradient(circle at 82% 78%,rgba(255,255,255,.12),transparent 42%)}
+.hero>*{position:relative;z-index:2}
+.hero .kicker{font-size:.74rem;letter-spacing:.22em;opacity:.85;margin:0 0 14px}
+.hero h1{font-family:'Amiri',serif;font-size:2.5rem;margin:0 0 8px;line-height:1.35;font-weight:700}
+.hero .part{display:inline-block;margin-top:14px;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 20px;font-size:.8rem}
+.hero .author{font-size:.9rem;opacity:.92;margin:6px 0 0}
+
+/* ---------- file nav ---------- */
+.filenav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;
+  background:var(--paper);border-bottom:1px solid var(--line);padding:12px}
+.filenav a,.filenav span{font-size:.78rem;text-decoration:none;padding:7px 15px;border-radius:9px;
+  border:1px solid var(--line2);color:var(--ink2);background:var(--bg)}
+.filenav a:hover{border-color:var(--accent);color:var(--accent-d)}
+.filenav span{opacity:.4}
+
+/* ---------- layout ---------- */
+.wrap{max-width:calc(var(--maxw) + var(--notew) + var(--gap) + 40px);margin:0 auto;padding:0 20px}
+.col{max-width:var(--maxw);margin-inline-start:calc(var(--notew) + var(--gap));position:relative}
+@media(max-width:1180px){.col{margin-inline-start:0;margin-inline-end:0}}
+
+/* ---------- cards ---------- */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--sh)}
+.src-card{margin:26px 0 10px;border-inline-start:5px solid var(--gold)}
+.src-card h3{margin:0 0 8px;font-size:.95rem;color:var(--gold)}
+.src-card p{margin:0;font-size:.82rem;color:var(--ink2);line-height:1.85}
+.legend{margin:14px 0 34px;background:var(--paper);border:1px dashed var(--line2);border-radius:14px;
+  padding:14px 18px;font-size:.8rem;color:var(--ink2);line-height:1.85}
+.legend b{color:var(--accent-d)}
+
+/* ---------- section ---------- */
+.divider{margin:56px 0 10px;text-align:center}
+.divider h2{font-family:'Amiri',serif;font-size:1.9rem;margin:0;color:var(--accent-d)}
+.divider p{margin:6px 0 0;font-size:.82rem;color:var(--ink3)}
+.divider .orn{color:var(--gold);letter-spacing:.4em;font-size:1.1rem;margin-bottom:8px}
+
+.maqta{margin:44px 0 0;--sc:var(--accent)}
+.maqta-head{border-inline-start:6px solid var(--sc);background:var(--paper);
+  border:1px solid var(--line);border-inline-start-width:6px;border-radius:14px;padding:18px 22px;box-shadow:var(--sh)}
+.maqta-head .num{display:inline-block;background:var(--sc);color:#fff;border-radius:999px;
+  padding:3px 14px;font-size:.72rem;margin-bottom:8px}
+.maqta-head h3{margin:0;font-family:'Amiri',serif;font-size:1.55rem;color:var(--ink);line-height:1.5}
+.maqta-head .surah{margin:6px 0 0;font-size:.82rem;color:var(--ink3)}
+
+/* ---------- quran ---------- */
+.ayat{
+  margin:24px 0;padding:26px 28px;border-radius:16px;
+  background:linear-gradient(180deg,var(--paper) 0%,var(--bg) 100%);
+  border:1px solid var(--line2);border-top:3px solid var(--sc);
+  font-family:'Amiri',serif;font-size:1.42rem;line-height:2.5;text-align:justify;color:var(--ink)
+}
+.ayat .bsm{display:block;text-align:center;font-size:1.15rem;color:var(--sc);margin-bottom:14px}
+.ayat .n{color:var(--gold);font-size:.9em}
+
+/* ---------- fawaid ---------- */
+.fawaid{list-style:none;margin:22px 0 0;padding:0;counter-reset:fd}
+.faida{position:relative;margin:0 0 20px;padding:2px 0 2px 0;text-align:justify}
+.faida .fnum{display:inline-block;font-weight:700;color:var(--sc);font-size:.95em;margin-inline-end:6px}
+.faida p{margin:0 0 10px}
+.prose p{margin:0 0 14px;text-align:justify}
+.subpoints{margin:8px 0 8px;padding-inline-start:20px}
+.subpoints li{margin-bottom:6px}
+.inq{font-family:'Amiri',serif;font-size:1.12em;color:var(--accent-d);line-height:2.1}
+html[data-theme="night"] .inq{color:var(--gold)}
+.qsay{display:block;margin:10px 0;padding:10px 16px;border-inline-start:3px solid var(--line2);
+  background:var(--paper);border-radius:0 10px 10px 0;font-size:.95em;color:var(--ink2)}
+
+/* ---------- notes ---------- */
+.nmark{
+  cursor:pointer;font-size:.62em;vertical-align:super;font-weight:700;color:#fff;
+  background:var(--sc);border-radius:6px;padding:1px 6px;margin:0 3px;line-height:1.4;
+  display:inline-block;transform:translateY(-2px);user-select:none
+}
+.nmark:hover{filter:brightness(1.15)}
+.note{
+  position:absolute;width:var(--notew);inset-inline-start:calc(-1 * (var(--notew) + var(--gap)));
+  font-size:.76rem;line-height:1.8;color:var(--ink2);background:var(--paper);
+  border:1px solid var(--line);border-radius:12px;padding:11px 14px;
+  border-inline-start:4px solid var(--nc,var(--ink3));font-family:'Cairo',sans-serif;text-align:start;
+  transition:box-shadow .2s,transform .2s
+}
+.note.flash{box-shadow:0 0 0 3px color-mix(in srgb,var(--nc) 30%,transparent);transform:translateY(-2px)}
+.note .nt{display:block;font-size:.63rem;font-weight:700;color:var(--nc);margin-bottom:3px;letter-spacing:.02em}
+.note .nt::before{content:attr(data-i) " ";font-family:'Amiri',serif}
+.note--doc{--nc:var(--n-doc)} .note--term{--nc:var(--n-term)} .note--alam{--nc:var(--n-alam)}
+.note--exp{--nc:var(--n-exp)} .note--link{--nc:var(--n-link)} .note--fix{--nc:var(--n-fix)} .note--ctx{--nc:var(--n-ctx)}
+.note em{font-style:normal;color:var(--ink);font-weight:600}
+
+/* ---------- blocks ---------- */
+.summary{margin:26px 0 10px;background:var(--paper);border:1px solid var(--line);
+  border-radius:16px;padding:20px 24px;border-top:4px solid var(--sc);box-shadow:var(--sh)}
+.summary h4{margin:0 0 4px;font-size:1rem;color:var(--sc)}
+.summary .tag{font-size:.66rem;color:var(--ink3);display:block;margin-bottom:10px}
+.summary ul{margin:0;padding-inline-start:20px}
+.summary li{margin-bottom:8px;font-size:.92rem}
+.fixbox{margin:22px 0;background:color-mix(in srgb,var(--n-fix) 8%,var(--paper));
+  border:1px solid color-mix(in srgb,var(--n-fix) 32%,var(--line));border-inline-start:5px solid var(--n-fix);
+  border-radius:14px;padding:16px 20px;font-size:.86rem;line-height:1.9}
+.fixbox h4{margin:0 0 8px;color:var(--n-fix);font-size:.92rem}
+.fixbox .row{margin-bottom:5px}
+.fixbox b{color:var(--ink)}
+.notebox{margin:22px 0;background:var(--paper);border:1px dashed var(--line2);
+  border-radius:14px;padding:16px 20px;font-size:.85rem;color:var(--ink2);line-height:1.9}
+.notebox h4{margin:0 0 6px;color:var(--accent-d);font-size:.92rem}
+
+/* ---------- quiz ---------- */
+.quiz{margin:28px 0 12px;background:var(--paper);border:1px solid var(--line);
+  border-radius:16px;padding:20px 22px;border-inline-end:5px solid var(--sc);box-shadow:var(--sh)}
+.quiz .qhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.quiz .qhead b{font-size:.9rem;color:var(--sc)}
+.quiz .score{font-size:.72rem;color:var(--ink3);background:var(--bg);border-radius:999px;padding:3px 12px}
+.qitem{margin-bottom:18px}
+.qitem:last-child{margin-bottom:0}
+.qitem .qq{font-size:.93rem;font-weight:600;margin:0 0 10px;line-height:1.8}
+.qopts{display:grid;gap:8px}
+.qopt{min-height:44px;display:flex;align-items:center;gap:10px;width:100%;text-align:start;
+  background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:8px 14px;
+  font-family:inherit;font-size:.86rem;color:var(--ink);cursor:pointer;line-height:1.6}
+.qopt:hover{border-color:var(--sc)}
+.qopt.ok{background:color-mix(in srgb,#2e8b57 14%,var(--paper));border-color:#2e8b57;color:var(--ink)}
+.qopt.bad{background:color-mix(in srgb,#c0392b 12%,var(--paper));border-color:#c0392b}
+.qexp{margin-top:10px;font-size:.8rem;line-height:1.85;color:var(--ink2);
+  background:var(--bg);border-radius:10px;padding:10px 14px;display:none}
+.qexp.show{display:block}
+
+/* ---------- flashcards ---------- */
+.deck{margin:60px 0 40px;background:var(--paper);border:1px solid var(--line);
+  border-radius:20px;padding:26px 24px;box-shadow:var(--sh)}
+.deck h3{margin:0 0 4px;font-family:'Amiri',serif;font-size:1.5rem;color:var(--accent-d)}
+.deck .dsub{margin:0 0 18px;font-size:.8rem;color:var(--ink3)}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.filters button{font-family:inherit;font-size:.74rem;padding:6px 13px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line2);background:var(--bg);color:var(--ink2)}
+.filters button.on{background:var(--fc,var(--accent));border-color:var(--fc,var(--accent));color:#fff}
+.flip{perspective:1400px;margin-bottom:14px}
+.flip-in{position:relative;min-height:190px;transition:transform .55s;transform-style:preserve-3d;cursor:pointer}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  border:1px solid var(--line2);background:var(--bg);line-height:1.9}
+.face .lbl{font-size:.64rem;letter-spacing:.14em;color:var(--ink3);margin-bottom:10px}
+.face .txt{font-size:1rem}
+.back{transform:rotateY(180deg);background:linear-gradient(160deg,var(--accent),var(--accent-d));color:#fff;border:0}
+.back .lbl{color:rgba(255,255,255,.75)}
+.deck-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.deck-nav button{font-family:inherit;font-size:.8rem;padding:9px 18px;border-radius:10px;cursor:pointer;
+  border:1px solid var(--line2);background:var(--bg);color:var(--ink2)}
+.deck-nav button:hover{border-color:var(--accent);color:var(--accent-d)}
+.counter{font-size:.78rem;color:var(--ink3)}
+.dl{display:block;width:100%;margin-top:16px;padding:13px;border:0;border-radius:12px;cursor:pointer;
+  font-family:inherit;font-size:.88rem;color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent-d))}
+
+footer{padding:36px 20px 120px;text-align:center;font-size:.76rem;color:var(--ink3);line-height:2}
+footer .sep{color:var(--gold);letter-spacing:.4em;display:block;margin-bottom:10px}
+
+/* ---------- mobile ---------- */
+@media(max-width:1180px){
+  .note{position:static;width:auto;inset-inline-start:auto;display:none;margin:10px 0 14px}
+  .note.open{display:block}
+  .nmark::after{content:" ▾";font-size:.8em}
+}
+@media(max-width:640px){
+  :root{--fs:17px}
+  .hero h1{font-size:1.85rem}
+  .hero{padding:52px 16px 36px}
+  .ayat{font-size:1.24rem;padding:20px 16px;line-height:2.35}
+  .card,.summary,.quiz,.deck{padding:18px 16px}
+  .wrap{padding:0 14px}
+  .divider h2{font-size:1.5rem}
+  .maqta-head h3{font-size:1.25rem}
+  .toolbar{bottom:12px;left:12px}
+}
+
+@media print{
+  #progress,#toc,#tocBtn,#tocOverlay,.toolbar,.filenav,.deck,.quiz{display:none!important}
+  body{background:#fff;color:#000}
+  .col{margin:0}
+  .note{position:static;width:auto;display:block;font-size:.7rem;margin:8px 0;break-inside:avoid}
+  .maqta{break-inside:avoid-page}
+  .hero{background:none;color:#000;border-bottom:2px solid #000}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<button id="tocBtn">☰ الفهرس</button>
+<div id="tocOverlay"></div>
+<nav id="toc"><h3>أنوار الأنبياء</h3><p class="toc-sub">الصفحة 1 من ٤ — التوطئة والمقاطع الأربعة الأولى من قصة إبراهيم</p></nav>
+
+<header class="hero">
+  <p class="kicker">أنوار الأنبياء — الجزء الأول</p>
+  <h1>إبراهيم عليه السلام — المقاطع ١–٤</h1>
+  <p class="author">الشيخ أحمد السيد — حفظه الله</p>
+  <div class="part">الصفحة 1 من ٤ — التوطئة والمقاطع الأربعة الأولى من قصة إبراهيم</div>
+</header>
+
+<nav class="filenav"><a href="index.html">الفهرس</a><span>الجزء 1 ●</span><a href="%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D9%8A%D8%A7%D8%A1%20-%202%20-%20%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%20%285%29%20%D9%88%D9%85%D9%88%D8%B3%D9%89%20%281-5%29.html">الجزء 2</a><a href="%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D9%8A%D8%A7%D8%A1%20-%203%20-%20%D9%85%D9%88%D8%B3%D9%89%20%D8%B9%D9%84%D9%8A%D9%87%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%28%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%B7%D8%B9%206-10%29.html">الجزء 3</a><a href="%D8%A3%D9%86%D9%88%D8%A7%D8%B1%20%D8%A7%D9%84%D8%A3%D9%86%D8%A8%D9%8A%D8%A7%D8%A1%20-%204%20-%20%D9%85%D9%88%D8%B3%D9%89%20%D8%B9%D9%84%D9%8A%D9%87%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%28%D8%A7%D9%84%D9%85%D9%82%D8%A7%D8%B7%D8%B9%2011-16%29.html">الجزء 4</a></nav>
+
+<div class="wrap"><div class="col">
+
+<div class="card src-card">
+<h3>عن المصدر</h3>
+<p>هذا النص من كتاب <b>«أنوار الأنبياء»</b> للشيخ <b>أحمد السيد</b> حفظه الله — الجزء الأول. والنص مأخوذ من تفريغ تسجيل صوتي للكتاب في <b>بودكاست «المفرِدون»</b> بقراءة <b>عمر</b>. وشارات البودكاست ومقدماته الصوتية ليست من الكتاب، فذُكرت هنا مرة واحدة ولم تُقحم في المتن.</p>
+</div>
+
+<div class="legend">
+<b>كيف تقرأ هذه الصفحة:</b> النص الأساسي في العمود هو <b>كلام المؤلف كاملًا بلا حذف ولا اختصار</b>، وما في الهامش الجانبي (وعلى الهاتف: البطاقات الصغيرة التي تُفتح بالنقر على الرقم الملوَّن) هو <b>إضافة توضيحية ليست من الكتاب</b>: توثيق آية، تخريج حديث، تعريف مصطلح، ترجمة عَلَم، أو تصحيح خطأ تفريغ. وكذلك صناديق «الخلاصة» والأسئلة التفاعلية إضافةٌ من إعداد الملف.
+</div>
+
+<section class="maqta" id="intro" style="--sc:#7a5a2a" data-toc="التوطئة (مقدمة المؤلف)">
+<div class="maqta-head"><span class="num">مقدمة الكتاب</span><h3>تَوطِئة</h3><p class="surah">بقلم المؤلف</p></div>
+
+<div class="prose" style="margin-top:22px">
+<p id="intro-p1" data-sub="حمد الله والصلاة على خاتم الأنبياء">الحمد لله الذي أكرم عباده بإنزال الوحي على من اختارهم من أنبيائه، فهداهم بذلك وأنار لهم الطريق، ونسأله أن يصلي ويسلم على خاتمهم وسيدهم محمد صلى الله عليه وسلم، وأن يرزقنا الاهتداء بهديه وهدي الأنبياء من قبله، <span class="inq">﴿أُولَٰئِكَ الَّذِينَ هَدَى اللَّهُ ۖ فَبِهُدَاهُمُ اقْتَدِهْ﴾</span><sup class="nmark" data-note="n0-1">١</sup>، وأن يجمعنا بهم في جنته. أما بعد:
+<aside class="note note--doc" id="n0-1"><span class="nt" data-i="١">توثيق</span> سورة الأنعام، الآية ٩٠. وهذه الآية هي المحور الذي يدور عليه الكتاب كله، ولذلك تكررت في التوطئة مرتين.</aside>
+</p>
+
+<p id="intro-p2" data-sub="سبب التسمية وموضوع الكتاب">فهذا كتاب سميته بـ«أنوار الأنبياء»، جمعت فيه تأملات وفوائد من الآيات التي ذُكر فيها الأنبياء الكرام عليهم من الله الصلاة والسلام، واعتنيت فيها بالمنهج الإصلاحي<sup class="nmark" data-note="n0-2">٢</sup> للأنبياء، وبيان السنن الإلهية المتعلقة بنصر دينه وأوليائه والتمكين لهم، وإهلاك أعدائه وقطع دابرهم بعد الإمهال لهم، بالإضافة إلى بيان شيء من المنهج التعبدي والتزكوي للأنبياء.
+<aside class="note note--term" id="n0-2"><span class="nt" data-i="٢">تعريف مصطلح</span> <em>المنهج الإصلاحي:</em> طريقة الأنبياء في تغيير واقع أقوامهم — من الدعوة والبيان والمحاجّة، إلى تربية الأتباع والصبر على الأذى. وهو محور الكتاب لا مجرد استطراد فيه.</aside>
+</p>
+
+<p id="intro-p3" data-sub="ثمرة الرحلة التدبرية">وبعد أن سرتُ في هذه الرحلة التدبرية لآيات الأنبياء وما يتعلق بمنهجهم الإصلاحي، علمتُ على وجه التفصيل أن هذا الباب عظيم النفع، وأن حاجة المصلحين وعامة المؤمنين إليه كبيرة، وأن هذا الموضوع مركزي في كتاب الله تعالى، حريٌّ بالاهتمام والتأمل والتدبر، ثم الاقتداء والاهتداء، كما قال تعالى <span class="inq">﴿أُولَٰئِكَ الَّذِينَ هَدَى اللَّهُ ۖ فَبِهُدَاهُمُ اقْتَدِهْ﴾</span>.</p>
+
+<p id="intro-p4" data-sub="موقع هذا الجزء من السلسلة">ويُعد هذا الكتاب الجزء الأول من سلسلة «أنوار الأنبياء» المطبوعة، وهو متعلق باثنين من الأنبياء وهما إبراهيم وموسى عليهما صلوات الله وسلامه، وسيكون متبوعًا بأجزاء أخرى بإذن الله تعالى متعلقة ببقية الأنبياء، بعون الله وتوفيقه، ونسأله التيسير والعون والبركة والقبول.</p>
+
+<p id="intro-p5" data-sub="منظومة كتب التأصيل الإصلاحي">وهذا الكتاب يأتي ضمن منظومة من الكتب والمواد المرئية التي قدمتها في مجال التأصيل الإصلاحي، وهي: <b>التزكية للمصلحين</b>، <b>معالجة القرآن لنفوس المصلحين</b>، <b>السيرة النبوية للمصلحين</b>، <b>بوصلة المصلح</b>، <b>مركزيات الإصلاح</b>.<sup class="nmark" data-note="n0-3">٣</sup>
+<aside class="note note--alam" id="n0-3"><span class="nt" data-i="٣">ترجمة عَلَم</span> <em>أحمد السيد:</em> داعية وباحث معاصر، مؤسس مشروع «تكوين» العلمي ومنصّاته، ومن أشهر ما كتب في هذا الباب سلسلة «التأصيل الإصلاحي» المذكورة هنا.</aside>
+</p>
+
+<p id="intro-p6" data-sub="المنهج المتّبع في الكتاب">والمنهج المتبع في هذا الكتاب هو عرض مقاطع الآيات القرآنية ثم التعليق عليها بالفوائد على شكل نقاط متتابعة. وأما المنهج الاستنباطي فقد ابتعدتُ فيه عن التكلف في الاستنباط، واجتهدتُ للسير فيه على ما يوافق سياق الآيات وألفاظها، وأحيانًا أستشهد بأقوال المفسرين المعتبرين. والحمد لله رب العالمين أولًا وآخرًا.</p>
+</div>
+
+<div class="quiz" data-section="intro"></div>
+
+<div class="summary"><h4>خلاصة التوطئة</h4><span class="tag">هذه الخلاصة إضافة تنظيمية من إعداد الملف، وليست من نص الكتاب.</span><ul><li>موضوع الكتاب: تأملات وفوائد من آيات الأنبياء، مع تركيز خاص على <b>المنهج الإصلاحي</b> والسنن الإلهية في نصر الدين وإهلاك المكذبين.</li><li>الجزء الأول مخصص لنبيّين اثنين فقط: <b>إبراهيم</b> و<b>موسى</b> عليهما السلام، وسيتبعه أجزاء أخرى.</li><li>الكتاب حلقة في منظومة «التأصيل الإصلاحي»: التزكية للمصلحين، معالجة القرآن لنفوس المصلحين، السيرة النبوية للمصلحين، بوصلة المصلح، مركزيات الإصلاح.</li><li>المنهج: عرض مقطع قرآني، ثم فوائد على شكل نقاط متتابعة، مع تجنّب التكلف في الاستنباط والالتزام بسياق الآيات.</li><li>الآية المحورية للكتاب كله: ﴿فَبِهُدَاهُمُ اقْتَدِهْ﴾.</li></ul></div>
+
+</section>
+
+<div class="divider">
+<p class="orn">❖ ❖ ❖</p>
+<h2>أولًا: أنوارٌ من قصص إبراهيم عليه السلام في القرآن</h2>
+<p>ويتضمن خمسة مقاطع من الآيات القرآنية — منها أربعة في هذه الصفحة، والخامس في الصفحة التالية</p>
+</div>
+
+<article class="maqta" id="m1" style="--sc:#9a6a1e" data-toc="المقطع الأول — سورة مريم">
+<div class="maqta-head"><span class="num">المقطع الأول</span><h3>من أنوار قصة إبراهيم عليه السلام</h3><p class="surah">آيات من سورة مريم</p></div>
+
+<div class="ayat">
+<span class="bsm">أعوذ بالله من الشيطان الرجيم — بسم الله الرحمن الرحيم</span>
+﴿وَاذْكُرْ فِي الْكِتَابِ إِبْرَاهِيمَ ۚ إِنَّهُ كَانَ صِدِّيقًا نَّبِيًّا <span class="n">﴿٤١﴾</span> إِذْ قَالَ لِأَبِيهِ يَا أَبَتِ لِمَ تَعْبُدُ مَا لَا يَسْمَعُ وَلَا يُبْصِرُ وَلَا يُغْنِي عَنكَ شَيْئًا <span class="n">﴿٤٢﴾</span> يَا أَبَتِ إِنِّي قَدْ جَاءَنِي مِنَ الْعِلْمِ مَا لَمْ يَأْتِكَ فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا <span class="n">﴿٤٣﴾</span> يَا أَبَتِ لَا تَعْبُدِ الشَّيْطَانَ ۖ إِنَّ الشَّيْطَانَ كَانَ لِلرَّحْمَٰنِ عَصِيًّا <span class="n">﴿٤٤﴾</span> يَا أَبَتِ إِنِّي أَخَافُ أَن يَمَسَّكَ عَذَابٌ مِّنَ الرَّحْمَٰنِ فَتَكُونَ لِلشَّيْطَانِ وَلِيًّا <span class="n">﴿٤٥﴾</span> قَالَ أَرَاغِبٌ أَنتَ عَنْ آلِهَتِي يَا إِبْرَاهِيمُ ۖ لَئِن لَّمْ تَنتَهِ لَأَرْجُمَنَّكَ ۖ وَاهْجُرْنِي مَلِيًّا <span class="n">﴿٤٦﴾</span> قَالَ سَلَامٌ عَلَيْكَ ۖ سَأَسْتَغْفِرُ لَكَ رَبِّي ۖ إِنَّهُ كَانَ بِي حَفِيًّا <span class="n">﴿٤٧﴾</span> وَأَعْتَزِلُكُمْ وَمَا تَدْعُونَ مِن دُونِ اللَّهِ وَأَدْعُو رَبِّي عَسَىٰ أَلَّا أَكُونَ بِدُعَاءِ رَبِّي شَقِيًّا <span class="n">﴿٤٨﴾</span> فَلَمَّا اعْتَزَلَهُمْ وَمَا يَعْبُدُونَ مِن دُونِ اللَّهِ وَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ ۖ وَكُلًّا جَعَلْنَا نَبِيًّا <span class="n">﴿٤٩﴾</span> وَوَهَبْنَا لَهُم مِّن رَّحْمَتِنَا وَجَعَلْنَا لَهُمْ لِسَانَ صِدْقٍ عَلِيًّا <span class="n">﴿٥٠﴾</span>﴾<sup class="nmark" data-note="n1-1">١</sup>
+</div>
+<aside class="note note--doc" id="n1-1"><span class="nt" data-i="١">توثيق</span> سورة مريم، الآيات ٤١–٥٠.</aside>
+
+<h4 style="color:var(--sc);margin:26px 0 0;font-size:1.05rem">الفوائد</h4>
+<ol class="fawaid">
+
+<li class="faida" id="f1-1" data-sub="١ — شرف منزلة الصدّيقية">
+<span class="fnum">الأولى:</span> في قوله سبحانه <span class="inq">﴿كَانَ صِدِّيقًا﴾</span> بيانُ شرفِ منزلة الصدّيقية<sup class="nmark" data-note="n1-2">٢</sup> عند الله تعالى، إذ وُصف بها خليله إبراهيم عليه السلام. والصدّيقية متعلقة بكمال التصديق بالله وخبره ووعده، كما أنها متعلقة بتمام الصدق في الأقوال والأفعال، بحيث يكون الصدّيق موافقًا بعمله قولَه تمامَ الموافقة. وما يوصف به الأنبياء في القرآن فهو على قسمين: قسم يختص بهم وهو النبوة ولوازمها، وقسم يشاركهم فيه غيرهم من المؤمنين كالصدّيقية المذكورة عن إبراهيم عليه السلام في هذا المقطع. والصفات التي امتدح بها الأنبياء مما لا يختصون بها هي من أعظم ما يُتقرَّب به إلى الله تعالى، فعلى المؤمن والمصلح الذي يتحرى هدي الأنبياء أن يحرص على تحقيق الصفة الصدّيقية التي هي كمال التصديق وكمال الصدق كما تقدم.
+<aside class="note note--term" id="n1-2"><span class="nt" data-i="٢">تعريف مصطلح</span> <em>الصدّيقية:</em> أعلى المراتب بعد النبوة، وهي اجتماع كمال التصديق بالخبر مع كمال الصدق في القول والعمل. وهي — كما يقرر المؤلف — صفة يشارك فيها المؤمنون الأنبياء، بخلاف النبوة.</aside>
+</li>
+
+<li class="faida" id="f1-2" data-sub="٢ — الدعوة في البيت وللأقارب">
+<span class="fnum">الثانية:</span> أن مقام الولد أمام والده يحول عادةً بينه وبين النصيحة، غير أن إبراهيم عليه السلام يقوم أمام والده مقامَ الناصح المحاور المبيّن صاحب الحجة، وهذا تأسيس للدعوة في البيوت وللأقرباء ولو كانوا كبارًا.
+</li>
+
+<li class="faida" id="f1-3" data-sub="٣ — الألفاظ الحسنة جسر القبول">
+<span class="fnum">الثالثة:</span> مقام الدعوة والإرشاد والتوجيه يتطلب استعمال الألفاظ الحسنة التي تجعل بين الداعي والمدعو جسرًا من القبول، وهذا ظاهر في هذه الآيات في دعوة إبراهيم لأبيه. والله تبارك وتعالى قد جبل نفوس الناس على قبول الرفق والقول اللين، والنفور من الغلظة والفجاجة.
+</li>
+
+<li class="faida" id="f1-4" data-sub="٤ — العلم معيار الاتّباع">
+<span class="fnum">الرابعة:</span> أن العلم معيار أساس في الاتباع <span class="inq">﴿قَدْ جَاءَنِي مِنَ الْعِلْمِ مَا لَمْ يَأْتِكَ فَاتَّبِعْنِي أَهْدِكَ﴾</span>، فليس الرشد مرتبطًا بكِبَر السن دائمًا، أو بالخبرة والتجربة وحدها، فقد يُهدى الفتى بالعلم إلى ما لم يُهدَ إليه الشيخ.
+</li>
+
+<li class="faida" id="f1-5" data-sub="٥ — تعرية عجز المعبودات">
+<span class="fnum">الخامسة:</span> في قول إبراهيم لأبيه <span class="inq">﴿يَا أَبَتِ لِمَ تَعْبُدُ مَا لَا يَسْمَعُ وَلَا يُبْصِرُ وَلَا يُغْنِي عَنكَ شَيْئًا﴾</span> بيانُ عجزِ ما يتعلق به المتعلقون من دون الله، في إشارة إلى تمام كمال الله الذي هو السميع البصير الذي يُغني من يشاء ما شاء، واستحضار ذلك أثناء العبادة والصلاة من أعظم ما يحقق العبودية لله تعالى، ويقود إلى حسن التذلل والافتقار والدعاء. وفيه من الفائدة الإصلاحية كذلك أهميةُ تعرية ما يتعلق به الناس من غير الله ببيان عجزه وضعفه، مع تمام بيان قدرة الله وغناه وإحاطته، وهذا يشمل الدين والشريعة والقوانين كذلك، فبيان قبح الأهواء البشرية مقابلَ تمام وكمال المنهج الرباني والشريعة الإلهية أمرٌ مهم، كما قال سبحانه وتعالى <span class="inq">﴿أَفَحُكْمَ الْجَاهِلِيَّةِ يَبْغُونَ ۚ وَمَنْ أَحْسَنُ مِنَ اللَّهِ حُكْمًا لِّقَوْمٍ يُوقِنُونَ﴾</span><sup class="nmark" data-note="n1-3">٣</sup>.
+<aside class="note note--doc" id="n1-3"><span class="nt" data-i="٣">توثيق</span> سورة المائدة، الآية ٥٠.</aside>
+</li>
+
+<li class="faida" id="f1-6" data-sub="٦ — ثمرة العلم الهداية">
+<span class="fnum">السادسة:</span> قال إبراهيم عليه السلام لأبيه <span class="inq">﴿فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا﴾</span>، وفي هذا فائدتان: الأولى أن ثمرة العلم الهدايةُ وليس الاستكثارَ من المعلومات، والثانية أن إبراز الثمرة للمدعو أمر مهم، خاصة وأنها تبدد شبهة الاتباع لمجرد الرئاسة والتقدم، وإنما الغرض من قول «اتّبعني» الهدايةُ إلى الصراط السوي فقط.
+</li>
+
+<li class="faida" id="f1-7" data-sub="٧ — الخروج من سلطة الأضواء">
+<span class="fnum">السابعة:</span> حينما تخرج من سلطة الأضواء وتكون عندك مرجعية صحيحة تحتكم إليها، فإن الحقائق تنكشف أمامك، كما انكشفت لإبراهيم عليه السلام حين قال <span class="inq">﴿لَا يَسْمَعُ وَلَا يُبْصِرُ وَلَا يُغْنِي﴾</span>، بينما كان أبوه يعتقد في الأصنام أمرًا عظيمًا.
+</li>
+
+<li class="faida" id="f1-8" data-sub="٨ — الشفقة على المدعو">
+<span class="fnum">الثامنة:</span> إظهار الحرص والشفقة على المدعو من هدي الأنبياء <span class="inq">﴿أَخَافُ أَن يَمَسَّكَ عَذَابٌ﴾</span>.
+</li>
+
+<li class="faida" id="f1-9" data-sub="٩ — حسن الأسلوب لا يلزم منه الاستجابة">
+<span class="fnum">التاسعة:</span> أن وجود الخطاب اللين والأسلوب الحسن والعلم لا يلزم منه استجابةُ الطرف الآخر، بل قد يزداد عنادًا <span class="inq">﴿لَأَرْجُمَنَّكَ﴾</span>.
+</li>
+
+<li class="faida" id="f1-10" data-sub="١٠ — القضية محبة الباطل لا الأسلوب">
+<span class="fnum">العاشرة:</span> القرآن يبين نفوس أصحاب الباطل ومقدار كرهها للحق ومعاداتها له، فالقضية ليست في وجود الأسلوب، وإنما في محبة الباطل وكراهية الحق في ذاته، والحق والباطل لا يجتمعان<sup class="nmark" data-note="n1-4">٤</sup>.
+<aside class="note note--fix" id="n1-4"><span class="nt" data-i="٤">تصحيح تفريغ</span> ورد في التفريغ الصوتي: «والحق والباطل يجتمعان» بسقوط أداة النفي، والسياق قاطع بأن المراد <em>لا يجتمعان</em>، فأُثبت على الصواب.</aside>
+</li>
+
+<li class="faida" id="f1-11" data-sub="١١ — لين الموقف عند التكذيب">
+<span class="fnum">الحادية عشرة:</span><sup class="nmark" data-note="n1-5">٥</sup> صاحب الحق وإن قوبل بالتكذيب فلا يلزم أن يكون موقفه شديدًا تجاه ذلك، كما قال سيدنا إبراهيم عليه السلام <span class="inq">﴿سَلَامٌ عَلَيْكَ ۖ سَأَسْتَغْفِرُ لَكَ رَبِّي﴾</span>.
+<aside class="note note--fix" id="n1-5"><span class="nt" data-i="٥">تصحيح تفريغ</span> جاءت أرقام الفوائد من الحادية عشرة إلى الرابعة عشرة مبتورة في التسجيل («الحاديه عش»، «الثانيه ع»، «الثاله عش»)، وهي خطأ نطق لا خطأ محتوى، فأُكمِلت على الصواب.</aside>
+</li>
+
+<li class="faida" id="f1-12" data-sub="١٢ — مرحلة الانتقال من الوطن">
+<span class="fnum">الثانية عشرة:</span> المصلح قد تمر به مرحلة يحتاج فيها إلى الانتقال من وطنه ابتعادًا عن الباطل <span class="inq">﴿وَأَعْتَزِلُكُمْ وَمَا تَدْعُونَ مِن دُونِ اللَّهِ﴾</span>.
+</li>
+
+<li class="faida" id="f1-13" data-sub="١٣ — التعلق بالله يعوّض الفراق">
+<span class="fnum">الثالثة عشرة:</span> إذا فارق المصلح الأهل والوطن والأحباب في ذات الله، فإنه يحتاج لما يغنيه من التعلق بالله والاستئناس به ما يخفف عنه هذا الفراق، كما قال إبراهيم عليه السلام في هذه الآيات <span class="inq">﴿وَأَعْتَزِلُكُمْ وَمَا تَدْعُونَ مِن دُونِ اللَّهِ وَأَدْعُو رَبِّي﴾</span>.
+</li>
+
+<li class="faida" id="f1-14" data-sub="١٤ — العطاء من جنس البلاء">
+<span class="fnum">الرابعة عشرة:</span> <span class="inq">﴿فَلَمَّا اعْتَزَلَهُمْ وَمَا يَعْبُدُونَ مِن دُونِ اللَّهِ وَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ﴾</span> — الله تبارك وتعالى يعطي عبادَه الثابتين الصابرين الذين ضحّوا في سبيله عطاءاتٍ لا تخطر لهم على بال، وكثيرًا ما تكون بعد الابتلاءات، وكثيرًا ما يكون هذا العطاء من جنس نوع البلاء. فإبراهيم عليه السلام حين اعتزل أهله وقومه جازاه الله بأن وهب له إسحاق ويعقوب وجعلهما أنبياء. فإذا ضحّيتَ في سبيل الله وصبرتَ في ذلك فأحسِن الظن بربك، فإن عاقبة البلاء حسنة.
+</li>
+</ol>
+
+<div class="quiz" data-section="m1"></div>
+
+<div class="summary"><h4>خلاصة المقطع الأول</h4><span class="tag">هذه الخلاصة إضافة تنظيمية من إعداد الملف، وليست من نص الكتاب.</span><ul><li>الصدّيقية صفة يشارك فيها المؤمنون الأنبياء، فهي هدف عملي لا مجرد وصف تشريفي.</li><li>أدب الخطاب مع الأب المشرك: نصيحة محاورة بالحجة، مع تكرار «يا أبتِ» أربع مرات.</li><li>العلم — لا السنّ ولا التجربة وحدها — هو معيار الاتّباع، وثمرته الهداية لا تكثير المعلومات.</li><li>حسن الأسلوب لا يضمن الاستجابة؛ فمعدن القضية محبة الباطل وكراهية الحق، لا طريقة العرض.</li><li>خاتمة المقطع: الاعتزال في ذات الله عاقبته عطاء أعظم من المفقود ﴿وَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ﴾.</li></ul></div>
+
+</article>
+
+<article class="maqta" id="m2" style="--sc:#a05c2c" data-toc="المقطع الثاني — سورة الأنعام">
+<div class="maqta-head"><span class="num">المقطع الثاني</span><h3>من أنوار قصة إبراهيم عليه السلام</h3><p class="surah">آيات من سورة الأنعام</p></div>
+
+<div class="ayat">
+<span class="bsm">أعوذ بالله من الشيطان الرجيم — بسم الله الرحمن الرحيم</span>
+﴿وَإِذْ قَالَ إِبْرَاهِيمُ لِأَبِيهِ آزَرَ أَتَتَّخِذُ أَصْنَامًا آلِهَةً ۖ إِنِّي أَرَاكَ وَقَوْمَكَ فِي ضَلَالٍ مُّبِينٍ <span class="n">﴿٧٤﴾</span> وَكَذَٰلِكَ نُرِي إِبْرَاهِيمَ مَلَكُوتَ السَّمَاوَاتِ وَالْأَرْضِ وَلِيَكُونَ مِنَ الْمُوقِنِينَ <span class="n">﴿٧٥﴾</span> فَلَمَّا جَنَّ عَلَيْهِ اللَّيْلُ رَأَىٰ كَوْكَبًا ۖ قَالَ هَٰذَا رَبِّي ۖ فَلَمَّا أَفَلَ قَالَ لَا أُحِبُّ الْآفِلِينَ <span class="n">﴿٧٦﴾</span> فَلَمَّا رَأَى الْقَمَرَ بَازِغًا قَالَ هَٰذَا رَبِّي ۖ فَلَمَّا أَفَلَ قَالَ لَئِن لَّمْ يَهْدِنِي رَبِّي لَأَكُونَنَّ مِنَ الْقَوْمِ الضَّالِّينَ <span class="n">﴿٧٧﴾</span> فَلَمَّا رَأَى الشَّمْسَ بَازِغَةً قَالَ هَٰذَا رَبِّي هَٰذَا أَكْبَرُ ۖ فَلَمَّا أَفَلَتْ قَالَ يَا قَوْمِ إِنِّي بَرِيءٌ مِّمَّا تُشْرِكُونَ <span class="n">﴿٧٨﴾</span> إِنِّي وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا ۖ وَمَا أَنَا مِنَ الْمُشْرِكِينَ <span class="n">﴿٧٩﴾</span>﴾<sup class="nmark" data-note="n2-1">١</sup>
+</div>
+<aside class="note note--doc" id="n2-1"><span class="nt" data-i="١">توثيق</span> سورة الأنعام، الآيات ٧٤–٧٩.</aside>
+
+<h4 style="color:var(--sc);margin:26px 0 0;font-size:1.05rem">الفوائد</h4>
+<ol class="fawaid">
+
+<li class="faida" id="f2-1" data-sub="١ — البصر النافذ لا يغترّ بالزينة">
+<span class="fnum">الأولى:</span> أن الذي ينظر ببصر نافذ فإنه لا يغترّ بما يزيّن به أصحاب الباطل باطلَهم، بل يرى حقائق الأمور دون بهرج أو تلبيس. فالأصنام التي كان يتخذها والد إبراهيم وغيره من قومه كانوا ينظرون لها على أنها آلهة تنفع وتضر وتُخشى وتُرجى وتُخاف، بينما صاحب البصيرة إبراهيم عليه السلام كان يراها على حقيقتها، فهي أخشاب أو أحجار لا تضر ولا تنفع. ولكل زمان أصنامه وفتنته وتأثيراته، فالذي يريد الوصول إلى الحق ينبغي له أن يخترق ببصيرته الحُجب الظاهرة، وينظر إلى حقائق القضايا بالدليل والبرهان.
+</li>
+
+<li class="faida" id="f2-2" data-sub="٢ — نقد الفكرة ووصف متبنّيها">
+<span class="fnum">الثانية:</span> منهج الأنبياء في التعامل مع العقائد الباطلة لا يقتصر على نقد الفكرة وحدها، وإنما يكون معها وصفُ من يتبناها بما يستحق كذلك، فهنا قال إبراهيم عليه السلام <span class="inq">﴿إِنِّي أَرَاكَ وَقَوْمَكَ فِي ضَلَالٍ مُّبِينٍ﴾</span>.
+</li>
+
+<li class="faida" id="f2-3" data-sub="٣ — الله يحب مواجهة الحق للباطل">
+<span class="fnum">الثالثة:</span> الله سبحانه وتعالى يحب مواجهة صاحب الحق للباطل، ولذلك يُكثر سبحانه من ذكر هذه المقامات في قصص الأنبياء.
+</li>
+
+<li class="faida" id="f2-4" data-sub="٤ — النظر في المخلوقات يورث اليقين">
+<span class="fnum">الرابعة:</span> <span class="inq">﴿وَكَذَٰلِكَ نُرِي إِبْرَاهِيمَ مَلَكُوتَ<sup class="nmark" data-note="n2-2">٢</sup> السَّمَاوَاتِ وَالْأَرْضِ وَلِيَكُونَ مِنَ الْمُوقِنِينَ﴾</span> — النظر في المخلوقات وآثار صنع الله تعالى من الأسباب التي تؤدي إلى زيادة الإيمان واليقين، فقوله سبحانه وتعالى <span class="inq">﴿وَلِيَكُونَ مِنَ الْمُوقِنِينَ﴾</span> أي نتيجةَ رؤيته ملكوتَ السماوات والأرض، وهذا يبين أهمية التفكر في آيات الله الكونية، وأنها من أعظم أسباب تحصيل اليقين.
+<aside class="note note--term" id="n2-2"><span class="nt" data-i="٢">تعريف مصطلح</span> <em>الملكوت:</em> صيغة مبالغة من المُلك، ويراد بها عظيم سلطان الله في السماوات والأرض وما فيهما من عجائب الصنعة الدالّة عليه.</aside>
+</li>
+
+<li class="faida" id="f2-5" data-sub="٥ — اليقين قبل الانطلاق في الدعوة">
+<span class="fnum">الخامسة:</span> المصلح يحتاج إلى اليقين قبل أن ينطلق في دعوته، ومن يتأمل كتاب الله تعالى يجد أن الله يهيّئ لأنبيائه من الدلائل والبراهين في بداية دعوتهم ما يجعلهم على يقين تام من صحة طريقهم، وسيأتي في قصة موسى عليه السلام أن الله أراه ابتداءً آيةَ العصا وقال <span class="inq">﴿لِنُرِيَكَ مِنْ آيَاتِنَا الْكُبْرَى﴾</span> قبل أن يأمره بالتوجه إلى فرعون، وهذا دليل على أهمية تعزيز اليقين بالنسبة للإنسان المصلح.<sup class="nmark" data-note="n2-3">٣</sup>
+<aside class="note note--link" id="n2-3"><span class="nt" data-i="٣">ربط داخلي</span> موعد هذه الإحالة: <em>المقطع الثالث من قصة موسى</em> (سورة طه) في الصفحة الثانية من هذا الكتاب.</aside>
+</li>
+
+<li class="faida" id="f2-6" data-sub="٦ — مقام المناظرة لا مقام النظر">
+<span class="fnum">السادسة:</span> في قول الله تعالى على لسان إبراهيم عليه السلام <span class="inq">﴿هَٰذَا رَبِّي﴾</span> وما بعدها من الآيات: اختلف العلماء في هذه الآيات الثلاث، هل كان المقام فيها مقامَ مناظرة مع قومه الذين كانوا يعبدون الأصنام والكواكب، أو مقامَ نظرٍ للبحث عن الدليل الموصل للإيمان ويكون هذا في بداية أمره قبل النبوة؟ والمقام هنا ليس للتفصيل في هذه المسائل وأدلتها، ولكن الفوائد ستنبني على ترجيح أحد القولين، ولعل الأقرب — والله أعلم — ما رجّحه ابن كثير<sup class="nmark" data-note="n2-4">٤</sup> وغيره: أن المقام مقام مناظرة، وإن كان قد قال بالقول الآخر كثيرٌ من أهل العلم. ومما يرجّح ذلك أن هذه الآيات مسبوقة بقول الله تعالى <span class="inq">﴿وَكَذَٰلِكَ نُرِي إِبْرَاهِيمَ مَلَكُوتَ السَّمَاوَاتِ وَالْأَرْضِ وَلِيَكُونَ مِنَ الْمُوقِنِينَ﴾</span>، وكما قال البغوي<sup class="nmark" data-note="n2-5">٥</sup> رحمه الله في تفسيره:
+<span class="qsay">«أفتراه أراه الملكوت ليوقن، فلما أيقن رأى كوكبًا قال: هذا ربي معتقدًا؟! فهذا ما لا يكون أبدًا».</span>
+<aside class="note note--alam" id="n2-4"><span class="nt" data-i="٤">ترجمة عَلَم</span> <em>ابن كثير</em> (ت ٧٧٤هـ): مفسّر ومؤرخ دمشقي، صاحب «تفسير القرآن العظيم» و«البداية والنهاية».</aside>
+<aside class="note note--alam" id="n2-5"><span class="nt" data-i="٥">ترجمة عَلَم</span> <em>البغوي</em> (ت ٥١٦هـ): محيي السنة، صاحب تفسير «معالم التنزيل» وكتاب «شرح السنة».</aside>
+</li>
+
+<li class="faida" id="f2-7" data-sub="٧ — التنزّل مع الخصم في الخطاب">
+<span class="fnum">السابعة:</span> قد يحتاج الداعي إلى التنزّل<sup class="nmark" data-note="n2-6">٦</sup> في الخطاب مع المخالف حتى يصل إلى النتيجة الصحيحة في إبطال قول المخالف، كما فعل إبراهيم عليه السلام. قال السعدي<sup class="nmark" data-note="n2-7">٧</sup> رحمه الله في تفسيره:
+<span class="qsay">«﴿هَٰذَا رَبِّي﴾ أي على وجه التنزّل مع الخصم، أي: هذا ربي، فهلمّ ننظر هل يستحق الربوبية، وهل يقوم لنا دليل على ذلك».</span>
+<aside class="note note--term" id="n2-6"><span class="nt" data-i="٦">تعريف مصطلح</span> <em>التنزّل مع الخصم:</em> أن يُسلّم المحاور بدعوى خصمه جدلًا ومؤقتًا، ثم يسير معه في لوازمها حتى تنكشف بطلانها بنفسها.</aside>
+<aside class="note note--alam" id="n2-7"><span class="nt" data-i="٧">ترجمة عَلَم</span> <em>عبد الرحمن السعدي</em> (ت ١٣٧٦هـ): مفسّر نجدي، صاحب «تيسير الكريم الرحمن في تفسير كلام المنّان».</aside>
+</li>
+
+<li class="faida" id="f2-8" data-sub="٨ — الجمع بين العقل والقلب">
+<span class="fnum">الثامنة:</span> قول إبراهيم عليه السلام <span class="inq">﴿لَا أُحِبُّ الْآفِلِينَ﴾</span><sup class="nmark" data-note="n2-8">٨</sup> يدل على أن علاقة إبراهيم عليه السلام بالربوبية ليست علاقة معرفية فحسب، وإنما علاقة قلبية تكون المحبة فيها أساسًا ومبدأً، وفي هذه الآيات الجمعُ بين العقل والقلب، بين الاستدلال البرهاني وبين الشعور الوجداني.
+<aside class="note note--term" id="n2-8"><span class="nt" data-i="٨">تعريف مصطلح</span> <em>الأفول:</em> الغياب والاحتجاب بعد الظهور. ووجه الحجة: أن المتغيّر الزائل لا يصلح ربًّا.</aside>
+</li>
+
+<li class="faida" id="f2-9" data-sub="٩ — إبراهيم إمام الحنفاء">
+<span class="fnum">التاسعة:</span> إبراهيم عليه السلام إمام الحنفاء<sup class="nmark" data-note="n2-9">٩</sup>، المائلين عن الشرك، المتبرّئين منه، المقبلين إلى الله إقبالَ إخلاصٍ وتوحيد، كما قال <span class="inq">﴿إِنِّي بَرِيءٌ مِّمَّا تُشْرِكُونَ ۝ إِنِّي وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ﴾</span>. ولذلك فإن من يستدل باسم إبراهيم عليه السلام على التقريب بين الحق والباطل وبين الإسلام والكفر، ملقّبًا هذا التقريبَ بـ«الإبراهيمية» أو «الدين الإبراهيمي»، فقد تعلّق باسمٍ هو أبعدُ الأسماء عن هذا المعنى؛ فهو إمام الحنفاء الذي يتبرأ من الشرك دائمًا، وهذه البراءة جزء أساسي من تحقيق التوحيد لله تعالى، إذ إن هذا التحقيق لا يكون إلا بالجمع بين النفي والإثبات: نفيِ الألوهية عما سوى الله تعالى وإثباتِها له وحده. وأما ما يسمى بالدين الإبراهيمي فالأولى به أن يُسمى دينَ التلفيق والتحريف، لا دينَ الإمام الحنيف.
+<aside class="note note--term" id="n2-9"><span class="nt" data-i="٩">تعريف مصطلح</span> <em>الحنيف:</em> المائل عن الشرك إلى التوحيد مَيلًا لازمًا. فالحنيفية اسمٌ يتضمن البراءة، لا التقريب.</aside>
+</li>
+
+<li class="faida" id="f2-10" data-sub="١٠ — المشهد الكلي لا الجزئي">
+<span class="fnum">العاشرة:</span> كان قوم إبراهيم عليه السلام لا يرون في الكواكب إلا المشهد الجزئي الصغير، فيرونها وحدها مستقلة عن خالقها، كما هو حال المنهج المادي اليوم. وأراد إبراهيم عليه السلام أن يلفت انتباه قومه إلى المشهد الكلي الأعظم، إلى ما وراء هذه الكواكب، فقال لهم <span class="inq">﴿إِنِّي وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ﴾</span>، فكأنه يقول لهم: إن كنتم مبهورين بهذه الكواكب فأنا قد وجّهتُ وجهي لخالق هذه الكواكب ومكوكِبها.
+</li>
+</ol>
+
+<div class="quiz" data-section="m2"></div>
+
+<div class="summary"><h4>خلاصة المقطع الثاني</h4><span class="tag">هذه الخلاصة إضافة تنظيمية من إعداد الملف، وليست من نص الكتاب.</span><ul><li>البصيرة تخترق الزينة الظاهرة: الصنم خشب وحجر، ولكل زمان أصنامه.</li><li>النظر في ملكوت السماوات والأرض سبب لليقين، واليقين شرطٌ سابق على الانطلاق في الدعوة.</li><li>الراجح عند المؤلف — تبعًا لابن كثير — أن ﴿هَٰذَا رَبِّي﴾ مقام مناظرة لا مقام بحث عن الحق، وقرينته سياق ﴿وَلِيَكُونَ مِنَ الْمُوقِنِينَ﴾.</li><li>«التنزّل مع الخصم» أسلوب حجاجي مشروع كما قرّره السعدي.</li><li>الحنيفية براءةٌ من الشرك، فاسم إبراهيم أبعدُ الأسماء عن دعاوى «الدين الإبراهيمي» التقريبية.</li></ul></div>
+
+</article>
+
+<article class="maqta" id="m3" style="--sc:#7d6134" data-toc="المقطع الثالث — سورة الأنعام">
+<div class="maqta-head"><span class="num">المقطع الثالث</span><h3>من أنوار قصة إبراهيم عليه السلام</h3><p class="surah">آيات من سورة الأنعام</p></div>
+
+<div class="ayat">
+<span class="bsm">أعوذ بالله من الشيطان الرجيم — بسم الله الرحمن الرحيم</span>
+﴿وَحَاجَّهُ قَوْمُهُ ۚ قَالَ أَتُحَاجُّونِّي فِي اللَّهِ وَقَدْ هَدَانِ ۚ وَلَا أَخَافُ مَا تُشْرِكُونَ بِهِ إِلَّا أَن يَشَاءَ رَبِّي شَيْئًا ۗ وَسِعَ رَبِّي كُلَّ شَيْءٍ عِلْمًا ۗ أَفَلَا تَتَذَكَّرُونَ <span class="n">﴿٨٠﴾</span> وَكَيْفَ أَخَافُ مَا أَشْرَكْتُمْ وَلَا تَخَافُونَ أَنَّكُمْ أَشْرَكْتُم بِاللَّهِ مَا لَمْ يُنَزِّلْ بِهِ عَلَيْكُمْ سُلْطَانًا ۚ فَأَيُّ الْفَرِيقَيْنِ أَحَقُّ بِالْأَمْنِ ۖ إِن كُنتُمْ تَعْلَمُونَ <span class="n">﴿٨١﴾</span> الَّذِينَ آمَنُوا وَلَمْ يَلْبِسُوا إِيمَانَهُم بِظُلْمٍ أُولَٰئِكَ لَهُمُ الْأَمْنُ وَهُم مُّهْتَدُونَ <span class="n">﴿٨٢﴾</span> وَتِلْكَ حُجَّتُنَا آتَيْنَاهَا إِبْرَاهِيمَ عَلَىٰ قَوْمِهِ ۚ نَرْفَعُ دَرَجَاتٍ مَّن نَّشَاءُ ۗ إِنَّ رَبَّكَ حَكِيمٌ عَلِيمٌ <span class="n">﴿٨٣﴾</span> وَوَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ ۚ كُلًّا هَدَيْنَا ۚ وَنُوحًا هَدَيْنَا مِن قَبْلُ ۖ وَمِن ذُرِّيَّتِهِ دَاوُودَ وَسُلَيْمَانَ وَأَيُّوبَ وَيُوسُفَ وَمُوسَىٰ وَهَارُونَ ۚ وَكَذَٰلِكَ نَجْزِي الْمُحْسِنِينَ <span class="n">﴿٨٤﴾</span> وَزَكَرِيَّا وَيَحْيَىٰ وَعِيسَىٰ وَإِلْيَاسَ ۖ كُلٌّ مِّنَ الصَّالِحِينَ <span class="n">﴿٨٥﴾</span> وَإِسْمَاعِيلَ وَالْيَسَعَ وَيُونُسَ وَلُوطًا ۚ وَكُلًّا فَضَّلْنَا عَلَى الْعَالَمِينَ <span class="n">﴿٨٦﴾</span> وَمِنْ آبَائِهِمْ وَذُرِّيَّاتِهِمْ وَإِخْوَانِهِمْ ۖ وَاجْتَبَيْنَاهُمْ وَهَدَيْنَاهُمْ إِلَىٰ صِرَاطٍ مُّسْتَقِيمٍ <span class="n">﴿٨٧﴾</span> ذَٰلِكَ هُدَى اللَّهِ يَهْدِي بِهِ مَن يَشَاءُ مِنْ عِبَادِهِ ۚ وَلَوْ أَشْرَكُوا لَحَبِطَ عَنْهُم مَّا كَانُوا يَعْمَلُونَ <span class="n">﴿٨٨﴾</span> أُولَٰئِكَ الَّذِينَ آتَيْنَاهُمُ الْكِتَابَ وَالْحُكْمَ وَالنُّبُوَّةَ ۚ فَإِن يَكْفُرْ بِهَا هَٰؤُلَاءِ فَقَدْ وَكَّلْنَا بِهَا قَوْمًا لَّيْسُوا بِهَا بِكَافِرِينَ <span class="n">﴿٨٩﴾</span> أُولَٰئِكَ الَّذِينَ هَدَى اللَّهُ ۖ فَبِهُدَاهُمُ اقْتَدِهْ ۗ قُل لَّا أَسْأَلُكُمْ عَلَيْهِ أَجْرًا ۖ إِنْ هُوَ إِلَّا ذِكْرَىٰ لِلْعَالَمِينَ <span class="n">﴿٩٠﴾</span>﴾<sup class="nmark" data-note="n3-1">١</sup>
+</div>
+<aside class="note note--doc" id="n3-1"><span class="nt" data-i="١">توثيق</span> سورة الأنعام، الآيات ٨٠–٩٠.</aside>
+
+<h4 style="color:var(--sc);margin:26px 0 0;font-size:1.05rem">الفوائد</h4>
+<ol class="fawaid">
+
+<li class="faida" id="f3-1" data-sub="١ — الدفاع عن الحق بالحجة">
+<span class="fnum">الفائدة الأولى:</span> في قوله سبحانه <span class="inq">﴿وَحَاجَّهُ قَوْمُهُ﴾</span> أن من هدي الأنبياء الاستماعَ للناس والدفاعَ عن الحق بالحجة والبينة والبرهان، بل والمبادرةَ إلى عرض الحق بدليله دعوةً إلى الله تعالى، ولذلك أكثر من ذكر حوارات الأنبياء مع أقوامهم وجدالهم إياهم.
+</li>
+
+<li class="faida" id="f3-2" data-sub="٢ — الهداية الخاصة أعظم المثبّتات">
+<span class="fnum">الفائدة الثانية:</span> من أعظم ما يثبّت المصلح في طريقه أمام حجج الخصوم وكيدهم وشبهاتهم ما يهبه الله له من الهداية الخاصة، كما قال إبراهيم عليه السلام <span class="inq">﴿أَتُحَاجُّونِّي فِي اللَّهِ وَقَدْ هَدَانِ﴾</span>. قال ابن كثير:
+<span class="qsay">«أي تجادلونني في أمر الله وأنه لا إله إلا هو، وقد بصّرني وهداني إلى الحق وأنا على بينة منه، فكيف ألتفت إلى أقوالكم الفاسدة وشبهكم الباطلة».</span>
+وهذه الهداية تستلزم رؤية أنوار طريق الحق وتذوّق حلاوته، وتستلزم الأنس بالله والثقة به، وتستلزم كذلك إبصار نقص طريق الباطل، وهذا كله من أعظم المثبِّتات. ولا يكفي امتلاك الحجة والقدرة على النقض المعرفي لقول المخالف دون أن يعيش المصلح حقيقة الهداية ونعيم الأنس بالله وبدينه.
+</li>
+
+<li class="faida" id="f3-3" data-sub="٣ — تخويف أهل الباطل بآلهتهم">
+<span class="fnum">الفائدة الثالثة:</span> أن أصحاب الباطل يخافون آلهتهم ورموزهم، وينسجون حولها الأساطير والخرافات التي تجعل لها الهيبة في النفوس، ومن ثَمّ يخوّفون بها أهل الحق ويهددونهم بقوتهم وقدرتهم على إلحاق الضرر بهم أو إخراجهم من أرضهم، وهذه سنة متوارثة بينهم يهددون بها الأنبياء. وتجد في المقابل الأنبياءَ على تمام الثقة بالله والتوكل عليه والاعتصام به، ومن ثم عدمِ الاكتراث بهذه التهديدات والتخويفات، وهذا ظاهر في هذا المقطع من قصة إبراهيم عليه السلام.
+<p>وسأذكر لتمام الفائدة بعض المواضع القرآنية المشابهة المتعلقة بغيره من الأنبياء كذلك؛ فمنها مثلًا ما قاله قوم هود عليه السلام عنه وما أجابهم به: <span class="inq">﴿إِن نَّقُولُ إِلَّا اعْتَرَاكَ بَعْضُ آلِهَتِنَا بِسُوءٍ ۗ قَالَ إِنِّي أُشْهِدُ اللَّهَ وَاشْهَدُوا أَنِّي بَرِيءٌ مِّمَّا تُشْرِكُونَ ۝ مِن دُونِهِ ۖ فَكِيدُونِي جَمِيعًا ثُمَّ لَا تُنظِرُونِ ۝ إِنِّي تَوَكَّلْتُ عَلَى اللَّهِ رَبِّي وَرَبِّكُم ۚ مَّا مِن دَابَّةٍ إِلَّا هُوَ آخِذٌ بِنَاصِيَتِهَا ۚ إِنَّ رَبِّي عَلَىٰ صِرَاطٍ مُّسْتَقِيمٍ﴾</span><sup class="nmark" data-note="n3-2">٢</sup>.</p>
+<p>ومن ذلك أيضًا قوله سبحانه عن الأنبياء في قِيلهم لأقوامهم: <span class="inq">﴿وَمَا لَنَا أَلَّا نَتَوَكَّلَ عَلَى اللَّهِ وَقَدْ هَدَانَا سُبُلَنَا ۚ وَلَنَصْبِرَنَّ عَلَىٰ مَا آذَيْتُمُونَا ۚ وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُتَوَكِّلُونَ﴾</span><sup class="nmark" data-note="n3-3">٣</sup>.</p>
+<p>ومن ذلك أيضًا ما ذكره الله في شأن نوح عليه السلام، فقال تعالى: <span class="inq">﴿وَاتْلُ عَلَيْهِمْ نَبَأَ نُوحٍ إِذْ قَالَ لِقَوْمِهِ يَا قَوْمِ إِن كَانَ كَبُرَ عَلَيْكُم مَّقَامِي وَتَذْكِيرِي بِآيَاتِ اللَّهِ فَعَلَى اللَّهِ تَوَكَّلْتُ فَأَجْمِعُوا أَمْرَكُمْ وَشُرَكَاءَكُمْ ثُمَّ لَا يَكُنْ أَمْرُكُمْ عَلَيْكُمْ غُمَّةً ثُمَّ اقْضُوا إِلَيَّ وَلَا تُنظِرُونِ﴾</span><sup class="nmark" data-note="n3-4">٤</sup>.</p>
+<p>ثم توصية الله لنبيه محمد صلى الله عليه وسلم بقوله: <span class="inq">﴿قُلِ ادْعُوا شُرَكَاءَكُمْ ثُمَّ كِيدُونِ فَلَا تُنظِرُونِ ۝ إِنَّ وَلِيِّيَ اللَّهُ الَّذِي نَزَّلَ الْكِتَابَ ۖ وَهُوَ يَتَوَلَّى الصَّالِحِينَ﴾</span><sup class="nmark" data-note="n3-5">٥</sup>.</p>
+<aside class="note note--doc" id="n3-2"><span class="nt" data-i="٢">توثيق</span> سورة هود، الآيات ٥٤–٥٦.</aside>
+<aside class="note note--doc" id="n3-3"><span class="nt" data-i="٣">توثيق</span> سورة إبراهيم، الآية ١٢.</aside>
+<aside class="note note--doc" id="n3-4"><span class="nt" data-i="٤">توثيق</span> سورة يونس، الآية ٧١.</aside>
+<aside class="note note--doc" id="n3-5"><span class="nt" data-i="٥">توثيق</span> سورة الأعراف، الآيتان ١٩٥–١٩٦.</aside>
+</li>
+
+<li class="faida" id="f3-4" data-sub="٤ — قلب الباطل على أهله">
+<span class="fnum">الفائدة الرابعة:</span> كلما تشبّع قلب المصلح بالعلم بالله وعظمته وجلاله، كان أعلى من أن تغيّر المؤثراتُ الأرضية المحدودة مفاهيمَه، بل كان قادرًا على أن يقلب على أصحاب الباطل باطلَهم ويجرّهم إلى مربع الحق ليضعهم فيه عراةً أمام الحق، وهذا مأخوذ من قول إبراهيم عليه السلام <span class="inq">﴿وَكَيْفَ أَخَافُ مَا أَشْرَكْتُمْ وَلَا تَخَافُونَ أَنَّكُمْ أَشْرَكْتُم بِاللَّهِ مَا لَمْ يُنَزِّلْ بِهِ عَلَيْكُمْ سُلْطَانًا ۚ فَأَيُّ الْفَرِيقَيْنِ أَحَقُّ بِالْأَمْنِ إِن كُنتُمْ تَعْلَمُونَ﴾</span>.
+</li>
+
+<li class="faida" id="f3-5" data-sub="٥ — الحجة عطاء من الله">
+<span class="fnum">الفائدة الخامسة:</span> في قوله سبحانه <span class="inq">﴿وَتِلْكَ حُجَّتُنَا آتَيْنَاهَا إِبْرَاهِيمَ عَلَىٰ قَوْمِهِ ۚ نَرْفَعُ دَرَجَاتٍ مَّن نَّشَاءُ﴾</span>: إنجازات المصلح وإن بذل فيها الجهد والسبب، فإن عليه أن يتذكر دائمًا أن الفضل لله، فهو الذي يؤتي المصلحَ حجتَه، وهو الذي يهديه ويسدده ويلهمه رشده.
+</li>
+
+<li class="faida" id="f3-6" data-sub="٦ — علوّ شأن الرسل بهداية الله">
+<span class="fnum">الفائدة السادسة:</span> إنما علا شأنُ الرسل وكَمُلوا وكانوا محلًّا للاقتداء لأن الله هداهم <span class="inq">﴿كُلًّا هَدَيْنَا﴾</span>، ومن أعظم ما هُدوا إليه تحقيقُ الاستسلام لله تعالى وتمامُ التوكل عليه في تبليغ الرسالة والصبر على الأذى في سبيل ذلك. وهذه الآيات من قوله <span class="inq">﴿كُلًّا هَدَيْنَا﴾</span> إلى قوله <span class="inq">﴿فَبِهُدَاهُمُ اقْتَدِهْ﴾</span> من أعظم الآيات التي تُبرز قيمة الهداية ومنزلتها وشأنها في الإسلام.
+</li>
+
+<li class="faida" id="f3-7" data-sub="٧ — الخوف من تسلل الشرك">
+<span class="fnum">الفائدة السابعة:</span> من أعظم ما ينبغي أن يخافه المصلح أن يتسلل شيء من الشرك إلى عمله وقلبه، فإن ذلك سبب لسلب النعمة وحبوط العمل، فقد قال الله سبحانه في هذه الآيات في حق الأنبياء <span class="inq">﴿وَلَوْ أَشْرَكُوا لَحَبِطَ عَنْهُم مَّا كَانُوا يَعْمَلُونَ﴾</span>.
+</li>
+
+<li class="faida" id="f3-8" data-sub="٨ — الأنبياء نماذج عملية">
+<span class="fnum">الفائدة الثامنة:</span> من أعظم سمات الأنبياء أنهم يحققون بأعمالهم ما يدعون إليه بأقوالهم، فكانوا نماذج عملية لا مجرد مقولات نظرية، ولذلك يأمر الله باتخاذهم قدوات وأئمة فقال سبحانه <span class="inq">﴿فَبِهُدَاهُمُ اقْتَدِهْ﴾</span>، وهكذا يكون المصلح حين يقتدي بهم عاملًا بعلمه، فيستمد العلم والعمل من الأنبياء.
+</li>
+</ol>
+
+<div class="quiz" data-section="m3"></div>
+
+<div class="summary"><h4>خلاصة المقطع الثالث</h4><span class="tag">هذه الخلاصة إضافة تنظيمية من إعداد الملف، وليست من نص الكتاب.</span><ul><li>الحوار والمحاجّة من صميم هدي الأنبياء، لا مجرد وسيلة اضطرارية.</li><li>الهداية الخاصة أعظم مثبِّت: وهي رؤية أنوار الحق، والأنس بالله، وإبصار نقص الباطل — لا مجرد امتلاك الحجة.</li><li>التخويف بالرموز والآلهة سنّة متوارثة في أهل الباطل، وجوابها ثقة الأنبياء وتوكلهم (هود، نوح، وخطاب النبي ﷺ).</li><li>الحجة عطاء إلهي ﴿وَتِلْكَ حُجَّتُنَا آتَيْنَاهَا﴾، فلا موضع لعُجب المصلح بإنجازه.</li><li>خطر الشرك على العمل قائم حتى في حق الأنبياء ﴿وَلَوْ أَشْرَكُوا لَحَبِطَ عَنْهُم﴾.</li></ul></div>
+
+</article>
+
+<article class="maqta" id="m4" style="--sc:#6d4f1c" data-toc="المقطع الرابع — سورة البقرة">
+<div class="maqta-head"><span class="num">المقطع الرابع</span><h3>من أنوار قصة إبراهيم عليه السلام</h3><p class="surah">آيات من سورة البقرة</p></div>
+
+<div class="ayat">
+<span class="bsm">أعوذ بالله من الشيطان الرجيم — بسم الله الرحمن الرحيم</span>
+﴿وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ بِكَلِمَاتٍ فَأَتَمَّهُنَّ ۖ قَالَ إِنِّي جَاعِلُكَ لِلنَّاسِ إِمَامًا ۖ قَالَ وَمِن ذُرِّيَّتِي ۖ قَالَ لَا يَنَالُ عَهْدِي الظَّالِمِينَ <span class="n">﴿١٢٤﴾</span> وَإِذْ جَعَلْنَا الْبَيْتَ مَثَابَةً لِّلنَّاسِ وَأَمْنًا وَاتَّخِذُوا مِن مَّقَامِ إِبْرَاهِيمَ مُصَلًّى ۖ وَعَهِدْنَا إِلَىٰ إِبْرَاهِيمَ وَإِسْمَاعِيلَ أَن طَهِّرَا بَيْتِيَ لِلطَّائِفِينَ وَالْعَاكِفِينَ وَالرُّكَّعِ السُّجُودِ <span class="n">﴿١٢٥﴾</span> وَإِذْ قَالَ إِبْرَاهِيمُ رَبِّ اجْعَلْ هَٰذَا بَلَدًا آمِنًا وَارْزُقْ أَهْلَهُ مِنَ الثَّمَرَاتِ مَنْ آمَنَ مِنْهُم بِاللَّهِ وَالْيَوْمِ الْآخِرِ ۖ قَالَ وَمَن كَفَرَ فَأُمَتِّعُهُ قَلِيلًا ثُمَّ أَضْطَرُّهُ إِلَىٰ عَذَابِ النَّارِ ۖ وَبِئْسَ الْمَصِيرُ <span class="n">﴿١٢٦﴾</span> وَإِذْ يَرْفَعُ إِبْرَاهِيمُ الْقَوَاعِدَ مِنَ الْبَيْتِ وَإِسْمَاعِيلُ رَبَّنَا تَقَبَّلْ مِنَّا ۖ إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ <span class="n">﴿١٢٧﴾</span> رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَا أُمَّةً مُّسْلِمَةً لَّكَ وَأَرِنَا مَنَاسِكَنَا وَتُبْ عَلَيْنَا ۖ إِنَّكَ أَنتَ التَّوَّابُ الرَّحِيمُ <span class="n">﴿١٢٨﴾</span> رَبَّنَا وَابْعَثْ فِيهِمْ رَسُولًا مِّنْهُمْ يَتْلُو عَلَيْهِمْ آيَاتِكَ وَيُعَلِّمُهُمُ الْكِتَابَ وَالْحِكْمَةَ وَيُزَكِّيهِمْ ۚ إِنَّكَ أَنتَ الْعَزِيزُ الْحَكِيمُ <span class="n">﴿١٢٩﴾</span> وَمَن يَرْغَبُ عَن مِّلَّةِ إِبْرَاهِيمَ إِلَّا مَن سَفِهَ نَفْسَهُ ۚ وَلَقَدِ اصْطَفَيْنَاهُ فِي الدُّنْيَا ۖ وَإِنَّهُ فِي الْآخِرَةِ لَمِنَ الصَّالِحِينَ <span class="n">﴿١٣٠﴾</span> إِذْ قَالَ لَهُ رَبُّهُ أَسْلِمْ ۖ قَالَ أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ <span class="n">﴿١٣١﴾</span>﴾<sup class="nmark" data-note="n4-1">١</sup>
+</div>
+<aside class="note note--doc" id="n4-1"><span class="nt" data-i="١">توثيق</span> سورة البقرة، الآيات ١٢٤–١٣١.</aside>
+
+<div class="fixbox">
+<h4>صندوق تصحيح — ضبط النص القرآني في هذا المقطع</h4>
+<div class="row">١) ورد في التفريغ الصوتي: «واذ ابتلى ابراهيم ربه بكلمات» بلا ضبط، وهو موضع خطير لأن ترك التشكيل يقلب الفاعل والمفعول. والصواب: <b>﴿وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ بِكَلِمَاتٍ﴾</b> — فالربّ سبحانه هو المُبتلي، وإبراهيم هو المُبتلى.</div>
+<div class="row">٢) ورد: «لا ينال عهد الظالمين»، والصواب: <b>﴿لَا يَنَالُ عَهْدِي الظَّالِمِينَ﴾</b>.</div>
+<div class="row">٣) ورد: «ربنا وجعلنا مسلمين لك»، والصواب: <b>﴿رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ﴾</b> بصيغة التثنية، لأن الداعي إبراهيم وإسماعيل معًا.</div>
+<div class="row" style="margin-top:8px;color:var(--ink2)">وهذه الفروق ناشئة عن التفريغ الصوتي لا عن الكتاب، وأُثبتت الآيات هنا على رسم المصحف.</div>
+</div>
+
+<h4 style="color:var(--sc);margin:26px 0 0;font-size:1.05rem">الفوائد</h4>
+<ol class="fawaid">
+
+<li class="faida" id="f4-1" data-sub="١ — التكليف الشرعي ابتلاء">
+<span class="fnum">الفائدة الأولى:</span> أن التكليف الشرعي ابتلاء، وأن أولى الناس بإتمام متطلبات هذا الابتلاء هم الأنبياء، ثم من تبعهم من الصالحين المصلحين.
+</li>
+
+<li class="faida" id="f4-2" data-sub="٢ — الإمامة ثمرة الامتثال لا العلم وحده">
+<span class="fnum">الفائدة الثانية:</span> أن حسن الامتثال لما أمر الله به من العبادات والتكاليف، وإتمام ذلك على وجهه وتوفيته، من مقدمات الإمامة في الدين، كما قال تعالى <span class="inq">﴿فَأَتَمَّهُنَّ قَالَ إِنِّي جَاعِلُكَ لِلنَّاسِ إِمَامًا﴾</span>، ولا ينتظر المرء أن يكون إمامًا بمجرد العلم.
+</li>
+
+<li class="faida" id="f4-3" data-sub="٣ — الاهتمام بالأجيال القادمة">
+<span class="fnum">الفائدة الثالثة:</span> في قول إبراهيم عليه السلام <span class="inq">﴿وَمِن ذُرِّيَّتِي﴾</span> تنبيهٌ إلى أهمية الاهتمام بالأجيال القادمة والسعي لإيجاد الأئمة والمصلحين فيها.
+</li>
+
+<li class="faida" id="f4-4" data-sub="٤ — لا تجتمع الإمامة مع الظلم">
+<span class="fnum">الفائدة الرابعة:</span> لا تجتمع الإمامة في الدين مع الظلم <span class="inq">﴿لَا يَنَالُ عَهْدِي الظَّالِمِينَ﴾</span>، فمن أراد أن يجعله الله إمامًا فليجتنب الظلم.
+</li>
+
+<li class="faida" id="f4-5" data-sub="٥ — كثرة الدعاء ووصف «أوّاه»">
+<span class="fnum">الفائدة الخامسة:</span> أهمية كثرة الدعاء في مختلف الأحوال والمقامات، فهذا المقطع يبين مقدار التزام إبراهيم عليه السلام للدعاء في جميع أحواله، وهذا ظاهر في عامة الآيات المتعلقة بإبراهيم عليه السلام في سور الشعراء وإبراهيم ومريم، ولذلك وصفه الله بأنه «أوّاه»<sup class="nmark" data-note="n4-2">٢</sup>، وقد رجّح الإمام الطبري<sup class="nmark" data-note="n4-3">٣</sup> بعد أن سرد الأقوال في تفسير كلمة «أوّاه» بأنه <b>الدعّاء</b>، أي كثير الدعاء، وهذا من أهم ما ينبغي على المؤمن أن يقتبسه من أنوار الأنبياء.
+<aside class="note note--doc" id="n4-2"><span class="nt" data-i="٢">توثيق</span> وصف «أوّاه» ورد في موضعين: التوبة ١١٤، وهود ٧٥.</aside>
+<aside class="note note--alam" id="n4-3"><span class="nt" data-i="٣">ترجمة عَلَم</span> <em>الطبري</em> (ت ٣١٠هـ): إمام المفسرين، صاحب «جامع البيان عن تأويل آي القرآن»، ومنهجه سرد الأقوال بأسانيدها ثم الترجيح بينها.</aside>
+</li>
+
+<li class="faida" id="f4-6" data-sub="٦ — الدعاء بالقبول بعد العمل">
+<span class="fnum">الفائدة السادسة:</span> عدم الركون إلى العمل الصالح وحده مهما بذل الإنسان فيه وتعب، بل لا بد من إتباعه بالدعاء بالقبول <span class="inq">﴿رَبَّنَا تَقَبَّلْ مِنَّا﴾</span>.
+</li>
+
+<li class="faida" id="f4-7" data-sub="٧ — مناسبة الاسم الحسن للدعاء">
+<span class="fnum">الفائدة السابعة:</span> أن من أنوار الأنبياء معرفةَ الأسماء الحسنى التي يحسن استعمالها مع الدعاء المناسب لها، فهنا نجد استعمال إبراهيم عليه السلام لاسمَي الله «السميع» و«العليم» مع الدعاء بالقبول.
+</li>
+
+<li class="faida" id="f4-8" data-sub="٨ — الدعاء بأصل الإسلام للأمة">
+<span class="fnum">الفائدة الثامنة:</span> الدعاء بتحقيق أصل الإسلام وأساس العبودية لله تعالى، وأنه من أهم ما ينبغي التفكير فيه للنفس وللأمة وللأجيال القادمة <span class="inq">﴿رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَا أُمَّةً مُّسْلِمَةً لَّكَ﴾</span>.
+</li>
+
+<li class="faida" id="f4-9" data-sub="٩ — الإعراض عن ملة إبراهيم سفه">
+<span class="fnum">الفائدة التاسعة:</span> أن الإعراض عن ملة إبراهيم — التي هي الاستسلام لله وحده والبراءة من الشرك وأهله — أساسُ السفه والجهل <span class="inq">﴿وَمَن يَرْغَبُ عَن مِّلَّةِ إِبْرَاهِيمَ إِلَّا مَن سَفِهَ نَفْسَهُ﴾</span>.
+</li>
+
+<li class="faida" id="f4-10" data-sub="١٠ — مركزية الاستسلام في البقرة">
+<span class="fnum">الفائدة العاشرة:</span> هذه الآيات تبين قيمة الاستسلام لله وحده، وأن عليه مدار الفلاح، لأنه من أهم ما وصف الله به خليله، إذ قال له ربه <span class="inq">﴿أَسْلِمْ ۖ قَالَ أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ﴾</span>، والمتأمل في سورة البقرة عمومًا يجد أن هذه القضية مركزية فيها.
+</li>
+</ol>
+
+<div class="quiz" data-section="m4"></div>
+
+<div class="summary"><h4>خلاصة المقطع الرابع</h4><span class="tag">هذه الخلاصة إضافة تنظيمية من إعداد الملف، وليست من نص الكتاب.</span><ul><li>الإمامة في الدين تُنال بإتمام الابتلاء والامتثال، لا بالعلم المجرد.</li><li>الظلم قاطعٌ للإمامة ﴿لَا يَنَالُ عَهْدِي الظَّالِمِينَ﴾.</li><li>همّ الذرية والأجيال القادمة حاضر في دعاء إبراهيم مرتين على الأقل في هذا المقطع.</li><li>«أوّاه» = كثير الدعاء عند ترجيح الطبري، والدعاء سمة لازمة لإبراهيم في كل أحواله.</li><li>العمل الصالح يُتبَع بالدعاء بالقبول، ومع الاسم الحسن المناسب له ﴿السَّمِيعُ الْعَلِيمُ﴾.</li><li>مدار الفلاح على الاستسلام ﴿أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ﴾، وهي قضية مركزية في سورة البقرة.</li></ul></div>
+
+</article>
+
+<div class="notebox">
+<h4>يتبع في الصفحة الثانية</h4>
+ينتهي هذا الجزء عند المقطع الرابع من قصة إبراهيم عليه السلام. و<b>المقطع الخامس</b> (آيات من سورة إبراهيم) يفتتح <b>الصفحة الثانية</b>، ويليه مباشرةً بدء أنوار قصة موسى عليه السلام.
+</div>
+
+
+<section class="deck">
+  <h3>بطاقات المراجعة</h3>
+  <p class="dsub">اضغط على البطاقة لقلبها. الزر السفلي يُنزّل ملف TSV جاهزًا للاستيراد المباشر في Anki.</p>
+  <div class="filters"><button data-f="all" style="--fc:#9a6a1e" class="on">الكل</button><button data-f="intro" style="--fc:#7a5a2a">التوطئة</button><button data-f="m1" style="--fc:#9a6a1e">المقطع ١</button><button data-f="m2" style="--fc:#a05c2c">المقطع ٢</button><button data-f="m3" style="--fc:#7d6134">المقطع ٣</button><button data-f="m4" style="--fc:#6d4f1c">المقطع ٤</button></div>
+  <div class="flip" id="flip"><div class="flip-in">
+    <div class="face"><span class="lbl">السؤال</span><span class="txt" id="cFront"></span></div>
+    <div class="face back"><span class="lbl">الإجابة</span><span class="txt" id="cBack"></span></div>
+  </div></div>
+  <div class="deck-nav">
+    <button id="prev">السابقة ›</button>
+    <span class="counter" id="counter"></span>
+    <button id="next">‹ التالية</button>
+  </div>
+  <button class="dl" id="dl">⬇ تحميل بطاقات هذا الجزء (TSV)</button>
+</section>
+</div></div>
+
+<div class="toolbar">
+  <button id="fsUp" title="تكبير الخط">أ+</button>
+  <button id="fsDown" title="تصغير الخط">أ−</button>
+  <button id="night" title="وضع القراءة الليلي">☾</button>
+</div>
+
+<footer>
+  <span class="sep">❖ ❖ ❖</span>
+  كتاب «أنوار الأنبياء» — الجزء الأول — الشيخ أحمد السيد<br>
+  النص المفرَّغ من تسجيل بودكاست «المفرِدون» (قراءة: عمر)<br>
+  هذا الجزء: 5 أقسام · 25 هامشًا · 10 سؤالًا تفاعليًّا · 32 بطاقة مراجعة
+</footer>
+
+<script>
+const QUIZ_DATA = [
+{
+"id": "q0-1",
+"sectionId": "intro",
+"question": "ما الموضوع الذي جعله المؤلف محورًا خاصًا لعنايته في هذا الكتاب؟",
+"options": [
+"إعجاز القرآن البياني في قصص الأنبياء",
+"المنهج الإصلاحي للأنبياء والسنن الإلهية المتعلقة به",
+"الترجيح بين أقوال المفسرين في آيات الأنبياء",
+"إثبات صحة قصص الأنبياء تاريخيًا"
+],
+"correctIndex": 1,
+"explanation": "صرّح في التوطئة أنه اعتنى بالمنهج الإصلاحي للأنبياء وبيان السنن الإلهية في نصر الدين والتمكين وإهلاك الأعداء، مع شيء من المنهج التعبدي والتزكوي."
+},
+{
+"id": "q0-2",
+"sectionId": "intro",
+"question": "الجزء الأول من «أنوار الأنبياء» مخصص لـ:",
+"options": [
+"إبراهيم وموسى عليهما السلام",
+"نوح وإبراهيم عليهما السلام",
+"موسى وعيسى عليهما السلام",
+"جميع الأنبياء المذكورين في القرآن"
+],
+"correctIndex": 0,
+"explanation": "نصّ المؤلف على أن هذا الجزء متعلق باثنين من الأنبياء هما إبراهيم وموسى، وسيتبعه أجزاء أخرى في بقية الأنبياء."
+},
+{
+"id": "q1-1",
+"sectionId": "m1",
+"question": "ما الفرق الذي قرّره المؤلف بين صفات الأنبياء في القرآن؟",
+"options": [
+"صفات خَلقية وصفات خُلقية",
+"صفات في الدنيا وصفات في الآخرة",
+"صفات تختص بهم كالنبوة، وصفات يشاركهم فيها المؤمنون كالصدّيقية",
+"صفات ثابتة بالقرآن وصفات ثابتة بالسنة"
+],
+"correctIndex": 2,
+"explanation": "قسّم ما يوصف به الأنبياء قسمين: ما يختص بهم وهو النبوة ولوازمها، وما يشاركهم فيه غيرهم كالصدّيقية — وهذا القسم الثاني من أعظم ما يُتقرَّب به إلى الله."
+},
+{
+"id": "q1-2",
+"sectionId": "m1",
+"question": "«ثمرة العلم الهداية وليس الاستكثار من المعلومات» — من أي لفظ في الآيات أُخذت هذه الفائدة؟",
+"options": [
+"﴿إِنَّهُ كَانَ صِدِّيقًا نَّبِيًّا﴾",
+"﴿فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا﴾",
+"﴿سَأَسْتَغْفِرُ لَكَ رَبِّي﴾",
+"﴿لَا يَسْمَعُ وَلَا يُبْصِرُ﴾"
+],
+"correctIndex": 1,
+"explanation": "وجه الدلالة أن إبراهيم علّق الاتّباع على غاية الهداية لا على الرئاسة والتقدّم، فقال ﴿فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا﴾."
+},
+{
+"id": "q2-1",
+"sectionId": "m2",
+"question": "ما القرينة التي رجّح بها المؤلف أن ﴿هَٰذَا رَبِّي﴾ مقام مناظرة لا مقام بحث عن الحق؟",
+"options": [
+"أن إبراهيم كان نبيًّا منذ صغره بالإجماع",
+"أن الآيات مسبوقة بقوله ﴿وَلِيَكُونَ مِنَ الْمُوقِنِينَ﴾",
+"أن قومه كانوا يعبدون الكواكب لا الأصنام",
+"أن السورة مكية وسياقها في الاحتجاج"
+],
+"correctIndex": 1,
+"explanation": "استدل بأن الرؤية للملكوت كانت لأجل اليقين، فلا يستقيم أن يقولها بعد اليقين معتقدًا — وهو معنى كلام البغوي الذي نقله."
+},
+{
+"id": "q2-2",
+"sectionId": "m2",
+"question": "وجه إبطال دعوى «الدين الإبراهيمي» بحسب هذا المقطع:",
+"options": [
+"أن إبراهيم لم يكن من العرب",
+"أن الحنيفية اسم يتضمن البراءة من الشرك، والتوحيد لا يتم إلا بالنفي والإثبات",
+"أن اسم إبراهيم لم يرد في سورة الأنعام",
+"أن التقريب بين الأديان بدعة حادثة في القرن الماضي"
+],
+"correctIndex": 1,
+"explanation": "بيّن أن إبراهيم إمام الحنفاء المتبرّئين من الشرك، فالاستدلال باسمه على التقريب تعلّقٌ باسم هو أبعد الأسماء عن ذلك المعنى."
+},
+{
+"id": "q3-1",
+"sectionId": "m3",
+"question": "ما الذي نفى المؤلف كفايته وحده في تثبيت المصلح أمام الخصوم؟",
+"options": [
+"الصبر على الأذى",
+"امتلاك الحجة والقدرة على النقض المعرفي",
+"الأنس بالله والثقة به",
+"إبصار نقص طريق الباطل"
+],
+"correctIndex": 1,
+"explanation": "قال صراحة: لا يكفي امتلاك الحجة والقدرة على النقض المعرفي دون أن يعيش المصلح حقيقة الهداية ونعيم الأنس بالله وبدينه."
+},
+{
+"id": "q3-2",
+"sectionId": "m3",
+"question": "ساق المؤلف مواضع قرآنية مشابهة في تخويف أهل الباطل وثبات الأنبياء. أيّ هؤلاء لم يُذكر فيها؟",
+"options": [
+"هود عليه السلام",
+"نوح عليه السلام",
+"النبي محمد صلى الله عليه وسلم",
+"يوسف عليه السلام"
+],
+"correctIndex": 3,
+"explanation": "ذكر قوم هود، ثم قول الأنبياء ﴿وَمَا لَنَا أَلَّا نَتَوَكَّلَ﴾، ثم نبأ نوح، ثم خطاب النبي ﷺ ﴿ثُمَّ كِيدُونِ﴾. ولم يُذكر يوسف في هذا الموضع."
+},
+{
+"id": "q4-1",
+"sectionId": "m4",
+"question": "مِمَّ استُنبطت فائدة أن الإمامة في الدين لا تُنال بمجرد العلم؟",
+"options": [
+"﴿وَمِن ذُرِّيَّتِي﴾",
+"﴿فَأَتَمَّهُنَّ قَالَ إِنِّي جَاعِلُكَ لِلنَّاسِ إِمَامًا﴾",
+"﴿رَبَّنَا تَقَبَّلْ مِنَّا﴾",
+"﴿أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ﴾"
+],
+"correctIndex": 1,
+"explanation": "رتّب الله الإمامة على إتمام الكلمات، أي على حسن الامتثال وتوفية التكليف — فالإمامة ثمرة عمل لا ثمرة علم مجرد."
+},
+{
+"id": "q4-2",
+"sectionId": "m4",
+"question": "بماذا فسّر الطبري وصف إبراهيم بأنه «أوّاه» — بعد سرد الأقوال وترجيحه؟",
+"options": [
+"كثير التسبيح",
+"كثير البكاء من خشية الله",
+"كثير الدعاء",
+"كثير الصمت والتفكر"
+],
+"correctIndex": 2,
+"explanation": "رجّح الطبري أن «الأوّاه» هو الدعّاء، أي كثير الدعاء، وهو المناسب لكثرة أدعية إبراهيم في سور الشعراء وإبراهيم ومريم."
+}
+];
+const CARDS_DATA = [
+{
+"sectionId": "intro",
+"front": "ما اسم الكتاب ومؤلفه، وما موضوع جزئه الأول؟",
+"back": "«أنوار الأنبياء» للشيخ أحمد السيد — الجزء الأول، وهو خاص بنبيّين: إبراهيم وموسى عليهما السلام."
+},
+{
+"sectionId": "intro",
+"front": "ما المنهج الذي التزمه المؤلف في عرض المادة؟",
+"back": "عرض مقطع من الآيات القرآنية، ثم التعليق عليه بفوائد على شكل نقاط متتابعة، مع تجنّب التكلف في الاستنباط والالتزام بسياق الآيات وألفاظها."
+},
+{
+"sectionId": "intro",
+"front": "عدِّد كتب «منظومة التأصيل الإصلاحي» التي ذكرها المؤلف.",
+"back": "التزكية للمصلحين — معالجة القرآن لنفوس المصلحين — السيرة النبوية للمصلحين — بوصلة المصلح — مركزيات الإصلاح."
+},
+{
+"sectionId": "intro",
+"front": "ما الآية التي جعلها المؤلف محورًا للكتاب وكرّرها في التوطئة؟",
+"back": "﴿أُولَٰئِكَ الَّذِينَ هَدَى اللَّهُ ۖ فَبِهُدَاهُمُ اقْتَدِهْ﴾ — الأنعام ٩٠."
+},
+{
+"sectionId": "m1",
+"front": "ما موضع آيات المقطع الأول من قصة إبراهيم؟",
+"back": "سورة مريم، الآيات ٤١–٥٠."
+},
+{
+"sectionId": "m1",
+"front": "عرِّف «الصدّيقية» كما قرّرها المؤلف.",
+"back": "كمال التصديق بالله وخبره ووعده، مع تمام الصدق في الأقوال والأفعال، بحيث يوافق الصدّيق عملُه قولَه تمام الموافقة."
+},
+{
+"sectionId": "m1",
+"front": "ما القسمان اللذان تنقسم إليهما أوصاف الأنبياء في القرآن؟",
+"back": "قسم يختص بهم وهو النبوة ولوازمها، وقسم يشاركهم فيه غيرهم من المؤمنين كالصدّيقية."
+},
+{
+"sectionId": "m1",
+"front": "ما وجه الاستدلال على أن العلم معيار في الاتباع لا السنّ؟",
+"back": "قوله ﴿قَدْ جَاءَنِي مِنَ الْعِلْمِ مَا لَمْ يَأْتِكَ فَاتَّبِعْنِي أَهْدِكَ﴾ — فقد يُهدى الفتى بالعلم إلى ما لم يُهدَ إليه الشيخ."
+},
+{
+"sectionId": "m1",
+"front": "ما الآية التي استشهد بها على قبح الأهواء البشرية مقابل كمال المنهج الرباني؟",
+"back": "﴿أَفَحُكْمَ الْجَاهِلِيَّةِ يَبْغُونَ ۚ وَمَنْ أَحْسَنُ مِنَ اللَّهِ حُكْمًا لِّقَوْمٍ يُوقِنُونَ﴾ — المائدة ٥٠."
+},
+{
+"sectionId": "m1",
+"front": "ما الفائدتان المستنبطتان من ﴿فَاتَّبِعْنِي أَهْدِكَ صِرَاطًا سَوِيًّا﴾؟",
+"back": "١) ثمرة العلم الهداية لا الاستكثار من المعلومات. ٢) إبراز الثمرة للمدعو مهم، لأنه يبدد شبهة الاتباع لمجرد الرئاسة."
+},
+{
+"sectionId": "m1",
+"front": "بمَ ردّ إبراهيم على تهديد أبيه بالرجم، وما الفائدة؟",
+"back": "﴿سَلَامٌ عَلَيْكَ ۖ سَأَسْتَغْفِرُ لَكَ رَبِّي﴾ — والفائدة أن صاحب الحق إن قوبل بالتكذيب فلا يلزم أن يشتد موقفه."
+},
+{
+"sectionId": "m1",
+"front": "ما قاعدة «العطاء من جنس البلاء» في قصة إبراهيم؟",
+"back": "لمّا اعتزل أهله وقومه في ذات الله، عوّضه الله بأهلٍ خير منهم: ﴿وَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ﴾ وجعلهما أنبياء."
+},
+{
+"sectionId": "m2",
+"front": "ما موضع آيات المقطعين الثاني والثالث من قصة إبراهيم؟",
+"back": "سورة الأنعام: المقطع الثاني ٧٤–٧٩، والمقطع الثالث ٨٠–٩٠."
+},
+{
+"sectionId": "m2",
+"front": "ما اسم والد إبراهيم كما ورد في سورة الأنعام؟",
+"back": "آزر — ﴿وَإِذْ قَالَ إِبْرَاهِيمُ لِأَبِيهِ آزَرَ﴾."
+},
+{
+"sectionId": "m2",
+"front": "عرِّف «الملكوت».",
+"back": "صيغة مبالغة من المُلك، ويراد بها عظيم سلطان الله في السماوات والأرض وما فيهما من عجائب الصنعة الدالّة عليه."
+},
+{
+"sectionId": "m2",
+"front": "مَن رجّح أن ﴿هَٰذَا رَبِّي﴾ مقام مناظرة، ومن نُقل عنه ترجيح ذلك بلفظ صريح؟",
+"back": "رجّحه ابن كثير وغيره، ونقل المؤلف تقرير البغوي (ت ٥١٦هـ) في «معالم التنزيل» بأن قولها معتقدًا بعد اليقين لا يكون أبدًا."
+},
+{
+"sectionId": "m2",
+"front": "عرِّف «التنزّل مع الخصم»، ومن نُقل عنه هذا التعبير هنا؟",
+"back": "تسليمُ المحاورِ بدعوى خصمه جدلًا ثم السير معه في لوازمها حتى ينكشف بطلانها — نقله المؤلف عن السعدي (ت ١٣٧٦هـ)."
+},
+{
+"sectionId": "m2",
+"front": "ما دلالة ﴿لَا أُحِبُّ الْآفِلِينَ﴾ على علاقة إبراهيم بربه؟",
+"back": "أنها ليست علاقة معرفية فحسب بل قلبية أساسها المحبة — ففي الآيات جمعٌ بين الاستدلال البرهاني والشعور الوجداني."
+},
+{
+"sectionId": "m2",
+"front": "لماذا كان الاستدلال باسم إبراهيم على «الدين الإبراهيمي» تعلّقًا بأبعد الأسماء عن المعنى؟",
+"back": "لأنه إمام الحنفاء المتبرّئين من الشرك، والتوحيد لا يتحقق إلا بالجمع بين النفي والإثبات — فالأولى تسمية ذلك دينَ التلفيق والتحريف."
+},
+{
+"sectionId": "m3",
+"front": "ما الذي يهبه الله للمصلح فيثبّته أمام الشبهات، وما نصّ الآية؟",
+"back": "الهداية الخاصة — ﴿أَتُحَاجُّونِّي فِي اللَّهِ وَقَدْ هَدَانِ﴾، وفسّرها ابن كثير بأن الله بصّره وهداه فهو على بيّنة."
+},
+{
+"sectionId": "m3",
+"front": "ما لوازم «الهداية الخاصة» الثلاثة التي ذكرها المؤلف؟",
+"back": "رؤية أنوار طريق الحق وتذوق حلاوته — الأنس بالله والثقة به — إبصار نقص طريق الباطل."
+},
+{
+"sectionId": "m3",
+"front": "اذكر المواضع الأربعة التي ساقها المؤلف نظائرَ لتخويف أهل الباطل بآلهتهم.",
+"back": "قوم هود (هود ٥٤–٥٦) — قول الأنبياء ﴿وَمَا لَنَا أَلَّا نَتَوَكَّلَ﴾ (إبراهيم ١٢) — نبأ نوح (يونس ٧١) — خطاب النبي ﷺ ﴿ثُمَّ كِيدُونِ﴾ (الأعراف ١٩٥–١٩٦)."
+},
+{
+"sectionId": "m3",
+"front": "ما الفائدة المستنبطة من ﴿وَتِلْكَ حُجَّتُنَا آتَيْنَاهَا إِبْرَاهِيمَ﴾؟",
+"back": "أن الحجة عطاء من الله، فعلى المصلح مهما بذل أن يتذكر أن الفضل لله وحده في التسديد والإلهام."
+},
+{
+"sectionId": "m3",
+"front": "ما دلالة ﴿وَلَوْ أَشْرَكُوا لَحَبِطَ عَنْهُم مَّا كَانُوا يَعْمَلُونَ﴾ في حق المصلح؟",
+"back": "أن تسلل الشرك إلى القلب والعمل سبب لسلب النعمة وحبوط العمل — وقد قيلت في حق الأنبياء أنفسهم."
+},
+{
+"sectionId": "m3",
+"front": "لماذا استحق الأنبياء أن يُؤمر باتخاذهم قدوات؟",
+"back": "لأنهم حققوا بأعمالهم ما دعوا إليه بأقوالهم، فكانوا نماذج عملية لا مقولات نظرية ﴿فَبِهُدَاهُمُ اقْتَدِهْ﴾."
+},
+{
+"sectionId": "m4",
+"front": "ما موضع آيات المقطع الرابع من قصة إبراهيم؟",
+"back": "سورة البقرة، الآيات ١٢٤–١٣١."
+},
+{
+"sectionId": "m4",
+"front": "ما مقدمات الإمامة في الدين حسب ﴿فَأَتَمَّهُنَّ﴾؟",
+"back": "حسن الامتثال لما أمر الله به من العبادات والتكاليف وإتمامه على وجهه وتوفيته — لا مجرد العلم."
+},
+{
+"sectionId": "m4",
+"front": "ما الصفة التي تقطع صاحبها عن الإمامة في الدين، وما دليلها؟",
+"back": "الظلم — ﴿لَا يَنَالُ عَهْدِي الظَّالِمِينَ﴾."
+},
+{
+"sectionId": "m4",
+"front": "بمَ فسّر الطبري وصف «أوّاه»، وأين ورد هذا الوصف؟",
+"back": "فسّره — بعد سرد الأقوال — بأنه الدعّاء أي كثير الدعاء. وورد الوصف في التوبة ١١٤ وهود ٧٥."
+},
+{
+"sectionId": "m4",
+"front": "ما الاسمان الحسنيان اللذان استعملهما إبراهيم مع الدعاء بالقبول؟",
+"back": "«السميع» و«العليم» — ﴿رَبَّنَا تَقَبَّلْ مِنَّا ۖ إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ﴾."
+},
+{
+"sectionId": "m4",
+"front": "ما التصحيحات الثلاثة التي أُجريت على النص القرآني في هذا المقطع بسبب التفريغ الصوتي؟",
+"back": "﴿وَإِذِ ابْتَلَىٰ إِبْرَاهِيمَ رَبُّهُ﴾ بضبط الفاعل والمفعول — ﴿لَا يَنَالُ عَهْدِي الظَّالِمِينَ﴾ — ﴿رَبَّنَا وَاجْعَلْنَا مُسْلِمَيْنِ لَكَ﴾ بصيغة التثنية."
+},
+{
+"sectionId": "m4",
+"front": "ما القضية المركزية في سورة البقرة التي ختم بها المقطع الرابع؟",
+"back": "الاستسلام لله وحده ﴿إِذْ قَالَ لَهُ رَبُّهُ أَسْلِمْ ۖ قَالَ أَسْلَمْتُ لِرَبِّ الْعَالَمِينَ﴾، وعليه مدار الفلاح."
+}
+];
+
+(function(){
+"use strict";
+var KEY="anwar_alanbiya_p1";
+
+/* ---------- theme + font ---------- */
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+var root=document.documentElement;
+var savedTheme=ls("anwar_theme"); if(savedTheme) root.setAttribute("data-theme",savedTheme);
+var savedFs=parseInt(ls("anwar_fs")||"0",10); if(savedFs>=15&&savedFs<=24) root.style.setProperty("--fs",savedFs+"px");
+function curFs(){return parseInt(getComputedStyle(root).getPropertyValue("--fs"),10)||18;}
+document.getElementById("fsUp").onclick=function(){var v=Math.min(24,curFs()+1);root.style.setProperty("--fs",v+"px");ls("anwar_fs",v);layoutNotes();};
+document.getElementById("fsDown").onclick=function(){var v=Math.max(15,curFs()-1);root.style.setProperty("--fs",v+"px");ls("anwar_fs",v);layoutNotes();};
+document.getElementById("night").onclick=function(){
+  var n=root.getAttribute("data-theme")==="night"?"day":"night";
+  root.setAttribute("data-theme",n);ls("anwar_theme",n);
+};
+
+/* ---------- progress ---------- */
+var bar=document.getElementById("progress");
+function prog(){
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  var p=h>0?(window.scrollY/h)*100:0;
+  bar.style.width=Math.min(100,Math.max(0,p))+"%";
+  ls(KEY,String(window.scrollY));
+}
+
+/* ---------- TOC ---------- */
+var toc=document.getElementById("toc"),ov=document.getElementById("tocOverlay");
+function tocToggle(on){toc.classList.toggle("open",on);ov.classList.toggle("open",on);}
+document.getElementById("tocBtn").onclick=function(){tocToggle(!toc.classList.contains("open"));};
+ov.onclick=function(){tocToggle(false);};
+(function buildToc(){
+  var ol=document.createElement("ol");
+  document.querySelectorAll("[data-toc]").forEach(function(sec){
+    var li=document.createElement("li");
+    var a=document.createElement("a");
+    a.href="#"+sec.id; a.textContent=sec.getAttribute("data-toc");
+    li.appendChild(a);
+    var subs=sec.querySelectorAll("[data-sub]");
+    if(subs.length){
+      var o2=document.createElement("ol");o2.className="lvl2";
+      subs.forEach(function(s){
+        var l2=document.createElement("li"),a2=document.createElement("a");
+        a2.href="#"+s.id; a2.textContent=s.getAttribute("data-sub");
+        l2.appendChild(a2);o2.appendChild(l2);
+      });
+      li.appendChild(o2);
+    }
+    ol.appendChild(li);
+  });
+  toc.appendChild(ol);
+  toc.addEventListener("click",function(e){ if(e.target.tagName==="A") tocToggle(false); });
+})();
+
+/* ---------- notes ---------- */
+function layoutNotes(){
+  var wide=window.matchMedia("(min-width:1181px)").matches;
+  var notes=Array.prototype.slice.call(document.querySelectorAll(".note"));
+  if(!wide){ notes.forEach(function(n){n.style.top="";}); return; }
+  var col=document.querySelector(".col"); if(!col) return;
+  var colTop=col.getBoundingClientRect().top+window.scrollY;
+  var prevBottom=-1e9;
+  notes.forEach(function(n){
+    n.style.top="0px";
+    var host=n.parentElement;
+    var want=host.getBoundingClientRect().top+window.scrollY-colTop;
+    var hostOff=host.offsetTop;
+    var top=Math.max(want, prevBottom+14);
+    n.style.top=(top-hostOff)+"px";
+    prevBottom=top+n.offsetHeight;
+  });
+}
+document.addEventListener("click",function(e){
+  var m=e.target.closest(".nmark"); if(!m) return;
+  var n=document.getElementById(m.getAttribute("data-note")); if(!n) return;
+  if(window.matchMedia("(max-width:1180px)").matches){ n.classList.toggle("open"); }
+  else { n.classList.add("flash"); setTimeout(function(){n.classList.remove("flash");},1400); }
+});
+
+/* ---------- quiz ---------- */
+var scores={};
+function renderQuiz(){
+  document.querySelectorAll(".quiz").forEach(function(box){
+    var sid=box.getAttribute("data-section");
+    var items=QUIZ_DATA.filter(function(q){return q.sectionId===sid;});
+    if(!items.length){box.remove();return;}
+    scores[sid]={done:0,ok:0,total:items.length};
+    var h='<div class="qhead"><b>تحقّق من فهمك</b><span class="score" id="sc-'+sid+'">0 / '+items.length+'</span></div>';
+    items.forEach(function(q){
+      h+='<div class="qitem" data-q="'+q.id+'"><p class="qq">'+q.question+'</p><div class="qopts">';
+      q.options.forEach(function(o,i){ h+='<button class="qopt" data-i="'+i+'">'+o+'</button>'; });
+      h+='</div><div class="qexp" id="ex-'+q.id+'"></div></div>';
+    });
+    box.innerHTML=h;
+  });
+}
+document.addEventListener("click",function(e){
+  var btn=e.target.closest(".qopt"); if(!btn) return;
+  var item=btn.closest(".qitem"), box=btn.closest(".quiz");
+  var sid=box.getAttribute("data-section"), qid=item.getAttribute("data-q");
+  var q=QUIZ_DATA.filter(function(x){return x.id===qid;})[0]; if(!q) return;
+  var i=parseInt(btn.getAttribute("data-i"),10);
+  var ok=(i===q.correctIndex);
+  var first=!item.hasAttribute("data-answered");
+  item.querySelectorAll(".qopt").forEach(function(b){b.classList.remove("bad");});
+  if(ok){
+    item.querySelectorAll(".qopt").forEach(function(b,j){ if(j===q.correctIndex) b.classList.add("ok"); });
+    if(first){item.setAttribute("data-answered","1");scores[sid].done++;scores[sid].ok++;}
+  }else{
+    btn.classList.add("bad");
+    if(first){item.setAttribute("data-answered","1");scores[sid].done++;}
+  }
+  var ex=document.getElementById("ex-"+qid);
+  ex.innerHTML='<b>'+(ok?"إجابة صحيحة.":"ليست الإجابة المقصودة.")+'</b> '+q.explanation;
+  ex.classList.add("show");
+  var s=document.getElementById("sc-"+sid);
+  if(s) s.textContent=scores[sid].ok+" / "+scores[sid].total;
+});
+
+/* ---------- flashcards ---------- */
+var filter="all", idx=0;
+function pool(){ return filter==="all"?CARDS_DATA:CARDS_DATA.filter(function(c){return c.sectionId===filter;}); }
+var flip=document.getElementById("flip"),fFront=document.getElementById("cFront"),
+    fBack=document.getElementById("cBack"),counter=document.getElementById("counter");
+function show(){
+  var p=pool();
+  if(!p.length){fFront.textContent="—";fBack.textContent="—";counter.textContent="0 / 0";return;}
+  if(idx>=p.length) idx=0; if(idx<0) idx=p.length-1;
+  flip.classList.remove("on");
+  fFront.innerHTML=p[idx].front; fBack.innerHTML=p[idx].back;
+  counter.textContent=(idx+1)+" / "+p.length;
+}
+flip.onclick=function(){flip.classList.toggle("on");};
+document.getElementById("next").onclick=function(){idx++;show();};
+document.getElementById("prev").onclick=function(){idx--;show();};
+document.querySelectorAll(".filters button").forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll(".filters button").forEach(function(x){x.classList.remove("on");});
+    b.classList.add("on"); filter=b.getAttribute("data-f"); idx=0; show();
+  };
+});
+function strip(s){var d=document.createElement("div");d.innerHTML=s;return (d.textContent||"").replace(/\t/g," ").replace(/\s+/g," ").trim();}
+document.getElementById("dl").onclick=function(){
+  var lines=CARDS_DATA.map(function(c){return strip(c.front)+"\t"+strip(c.back);});
+  var blob=new Blob(["\ufeff"+lines.join("\n")],{type:"text/tab-separated-values;charset=utf-8"});
+  var a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download="أنوار الأنبياء - إبراهيم 1-4.tsv"; document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+};
+
+/* ---------- init ---------- */
+renderQuiz(); show();
+window.addEventListener("scroll",prog,{passive:true});
+window.addEventListener("resize",function(){layoutNotes();prog();});
+window.addEventListener("load",function(){
+  layoutNotes();
+  var y=parseInt(ls(KEY)||"0",10);
+  if(y>200 && !location.hash){ window.scrollTo(0,y); }
+  setTimeout(layoutNotes,400); prog();
+});
+layoutNotes(); prog();
+})();
+
+</script>
+</body>
+</html>
